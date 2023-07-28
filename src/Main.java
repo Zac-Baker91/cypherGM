@@ -10,11 +10,11 @@ public class Main {
         boolean optErr = true;
 
         Scanner stdin = new Scanner(System.in);
-        System.out.print("Welcome the Cypher System Game Management. \n\nSelect on option bellow (enter number)\n");
+        System.out.println("Welcome the Cypher System Game Management.");
 
         //input checking loop - switch allows for easy addition or removal of options
         while (optErr) {
-            System.out.print("[1] Player Creation    [2] NPC Creation\n");
+            System.out.print("Select on option bellow (enter number)\n[1] Player Creation    [2] NPC Creation\n");
             String selection = stdin.nextLine();
             int selectNum;
             try{
@@ -40,16 +40,29 @@ public class Main {
                     System.out.print("Focus: ");
                     focus = stdin.nextLine();
                     Player n00b = new Player(name, descriptor, type, focus);
+                    // todo warrior player should able to choose either edge in might or speed(current defaults to speed)
+
+                    // todo Player need to choose specifics items, using item tags with name = tag as place holder.
+
+                    //todo Player chooses from ability list, using tags for abilities array.
+
+                    //todo non-standard player types need to be re-constructed with standard types.
+
+                    //todo modifier player based on Descriptor
+
+                    //todo modifier player based on Foci
 
 
-                    optErr = false;
+                    System.out.println("Welcome "+n00b.getDescription());
+                    System.out.println("============================================================");
+
                 }
                 case 2 -> {
                     //put the NPC creation methode here
                     System.out.println("This is where NPC creation will be");
-                    optErr = false;
+                    System.out.println("============================================================");
                 }
-                default -> System.out.print("\nOpps: invalid entry. [try again]\n");
+                default -> System.out.print("\nOops: invalid entry. [try again]\n");
             }
 
         }
