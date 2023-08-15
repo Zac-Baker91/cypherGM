@@ -1,3 +1,5 @@
+package playerMeta;
+
 public class Item {
     private String name;
     private String range;
@@ -5,7 +7,7 @@ public class Item {
     private String durability;
     private String description;
 
-    //Item(String name) constructor used to create tags for unspecified items in Item arrays
+    //playerMeta.Item(String name) constructor used to create tags for unspecified items in playerMeta.Item arrays
     public Item(String description){
         this.name = "Tag";
         this.range = "";

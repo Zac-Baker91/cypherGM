@@ -1,3 +1,4 @@
+package playerMeta;
 
 //Stats are the basic player values if reduced to 0 player suffers negative effects, even death
 //each has a Max, Pool, and Edge. Pool is your capacity and edge is your skill level.

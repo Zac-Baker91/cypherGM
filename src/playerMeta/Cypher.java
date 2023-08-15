@@ -1,3 +1,5 @@
+package playerMeta;
+
 public class Cypher {
     private final String name;
     private final String effect;

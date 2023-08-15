@@ -1,7 +1,14 @@
 
-import java.util.Scanner;
 //--later dev note: consider an init file for array sizes and other hard coded values
 //-- later dev note: consider adding synonym list checker for the main types to add versatility
+
+import playerMeta.Stat;
+import playerMeta.Abilities;
+import playerMeta.Cypher;
+import playerMeta.Item;
+import playerMeta.Skill;
+
+//Most getters and setter will be useful in future features.
 public class Player {
     private  String name;
     private String description;
@@ -14,7 +21,7 @@ public class Player {
     private int tier,effort,xp;
     // 36 is the number of skill slots provided on the character sheet provide with the rule book
     private Skill[] skillArray = new Skill[36];
-    //Abilities are special so they are limited to 10
+    //playerMeta.Abilities are special so they are limited to 10
     private Abilities[] abilitiesArray = new Abilities[10];
     //This is not a game for loot goblins. element 0 should be reserve for player clothing(even if they are nude)
     private Item[] playersBag = new Item[15];
@@ -33,7 +40,7 @@ public class Player {
         //Parsing Types
         if (type.equals("warrior")) {
 
-            this.Might = new Stat(10, 1);
+            this.Might = new Stat(10, 0);
             this.Speed = new Stat(10, 0);
             this.Intellect = new Stat(8, 0);
             this.maxCypher = 2;
@@ -141,84 +148,118 @@ public class Player {
         }
         this.description = name + " is a " + descriptor + " " + type + " who " + focus + "!";
     }
-
+//===================Getters============================
     public String getName() {
         return name;
     }
-
     public String getDescription() {
         return description;
     }
-
     public String getDescriptor() {
         return descriptor;
     }
-
     public String getType() {
         return type;
     }
-
     public String getFocus() {
         return focus;
     }
-
     public Stat getMight() {
         return Might;
     }
-
     public Stat getSpeed() {
         return Speed;
     }
-
     public Stat getIntellect() {
         return Intellect;
     }
-
     public int getTier() {
         return tier;
     }
-
     public int getEffort() {
         return effort;
     }
-
     public int getXp() {
         return xp;
     }
-
     public Skill[] getSkillArray() {
         return skillArray;
     }
-
     public Abilities[] getAbilitiesArray() {
         return abilitiesArray;
     }
-
     public Item[] getPlayersBag() {
         return playersBag;
     }
-
     public Cypher[] getCypherArray() {
         return cypherArray;
     }
-
     public int getMaxCypher() {
         return maxCypher;
     }
-
+//================Setters===================
     public void setTier(int tier) {
         this.tier = tier;
     }
-
     public void setEffort(int effort) {
         this.effort = effort;
     }
-
     public void setMaxCypher(int maxCypher) {
         this.maxCypher = maxCypher;
     }
+///==============================++===
+    //add stat/skill modifiers
+    //these methods are typical used for player advancement
+    // but are also part of the foci and descriptor aspects of character building
+    public void modifyMightEdge(int amount) {
 
-    //todo manipulators
+        this.Might.setEdge(this.Might.getEdge() + amount);
+    }
+    public void modifySpeedEdge(int amount) {
+        this.Speed.setEdge(this.Speed.getEdge() + amount);
+    }
+    public void modifyIntellectEdge(int amount) {
+        this.Intellect.setEdge(this.Intellect.getEdge() + amount);
+    }
+    public void modifyMightPool(int amount){
+
+        this.Might.setMaxPool(this.Might.getMaxPool() + amount);
+    }
+    public void modifySpeedPool(int amount){
+        this.Speed.setMaxPool(this.Speed.getMaxPool() + amount);
+    }
+    public void modifyIntellectPool(int amount){
+        this.Intellect.setMaxPool(this.Intellect.getMaxPool() + amount);
+    }
+    public void modifyCurrentMight(int amount){
+        this.Might.setCurrentPool(this.Might.getCurrentPool() + amount);
+    }
+    public void modifyCurrentSpeed(int amount){
+        this.Speed.setCurrentPool(this.Speed.getCurrentPool() + amount);
+    }
+    public void modifyCurrentIntellect(int amount){
+        this.Intellect.setCurrentPool(this.Intellect.getCurrentPool() + amount);
+    }
+    public void addItem(Item item){
+        int itemPtr = 1;
+        for(Item i : this.playersBag){
+            if (i != null) ++itemPtr;
+            else break;
+        }
+        this.playersBag[itemPtr] = item;
+    }
+    public void addCypher(Cypher cypher){
+        int cyPtr = 1;
+        for(Cypher i : this.cypherArray){
+            if (i != null) ++cyPtr;
+            else break;
+        }
+        this.cypherArray[cyPtr] = cypher;
+    }
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// Cypher Game Manager
+// playerMeta.Cypher Game Manager
 //A game management assistant for the table-top RPG system "cypher system" by Monte cook
 // Program written by Zac Baker
 public class Main {
@@ -10,7 +10,7 @@ public class Main {
         boolean optErr = true;
 
         Scanner stdin = new Scanner(System.in);
-        System.out.println("Welcome the Cypher System Game Management.");
+        System.out.println("Welcome the playerMeta.Cypher System Game Management.");
 
         //input checking loop - switch allows for easy addition or removal of options
         while (optErr) {
@@ -40,8 +40,15 @@ public class Main {
                     System.out.print("Focus: ");
                     focus = stdin.nextLine();
                     Player n00b = new Player(name, descriptor, type, focus);
-                    // todo warrior player should able to choose either edge in might or speed(current defaults to speed)
-
+                    //warrior player should be able to choose either edge in might or speed
+                    if ((n00b.getType()).equals("warrior")) {
+                        System.out.println("Warrior choose : [1]might or [2]speed");
+                        int p = stdin.nextInt();
+                        stdin.nextLine();
+                        if (p == 1) n00b.modifyMightEdge(1);
+                        else if (p == 2) n00b.modifySpeedEdge(1);
+                        else System.out.println("Bad input now you are weak and slow LOLz");
+                    }
                     // todo Player need to choose specifics items, using item tags with name = tag as place holder.
 
                     //todo Player chooses from ability list, using tags for abilities array.
