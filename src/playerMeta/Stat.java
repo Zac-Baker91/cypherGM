@@ -1,3 +1,4 @@
+package playerMeta;
 
 //Stats are the basic player values if reduced to 0 player suffers negative effects, even death
 //each has a Max, Pool, and Edge. Pool is your capacity and edge is your skill level.
@@ -14,6 +15,13 @@ public class Stat {
         currentPool = p;
         maxPool = p;
         edge = e;
+    }
+
+    @Override
+    public String toString() {
+        return "currentPool: " + currentPool +
+                ", edge: " + edge +
+                ", maxPool: " + maxPool;
     }
 
     public int getCurrentPool() {
@@ -39,4 +47,9 @@ public class Stat {
     public void setMaxPool(int maxPool) {
         this.maxPool = maxPool;
     }
+
+    public void modEdge(int mod){
+        this.edge = this.edge + mod;
+    }
 }
+
