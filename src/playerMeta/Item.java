@@ -1,5 +1,7 @@
 package playerMeta;
-
+/**
+ * Items are things that player carry in their bag: weapons, clothing, necronomicon...whatever
+**/
 public class Item {
     private String name;
     private String range;
@@ -62,5 +64,14 @@ public class Item {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return  name + '\'' +
+                ", range='" + range + '\'' +
+                ", damage=" + damage +
+                ", durability='" + durability + '\'' +
+                ", description='" + description;
     }
 }

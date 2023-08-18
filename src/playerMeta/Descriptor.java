@@ -1,8 +1,10 @@
 package playerMeta;
+
+import java.util.InputMismatchException;
+
 /***
- * This enumeration contains the metadata for all the cypher system descriptors:
- * Name , Skill array, Abilities array, and Pool modifiers.
- *
+ * This enumeration contains the metadata for all the cypher system character descriptors:
+ * keyName , skillArray, abilityArray, mightMod, speedMod, and intellectMod.
  * These descriptors have been slightly adapted from the original rule book for easier player usability.
  ***/
 public enum Descriptor {
@@ -556,6 +558,17 @@ public enum Descriptor {
             },
             0,0,2 );
 
+    public static Descriptor keyNameof(String key) {
+        for(Descriptor playerDes : Descriptor.values()){
+            if (playerDes.keyName.equals(key)){
+                return(playerDes);
+            }
+        }
+        return null;
+    }
+
+
+
     public final String keyName;
     public final Skill[] skillsArray;
     public final Abilities[] abilityArray;
@@ -571,4 +584,6 @@ public enum Descriptor {
         int speedMod = speed;
         int intellectMod = intellect;
     }
+
+
 }

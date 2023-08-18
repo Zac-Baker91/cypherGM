@@ -1,11 +1,15 @@
 package playerMeta;
-
+/**
+ * Abilities are specifics action that can be done at a cost.
+ * They typically use a cost and type rated to a stat pool
+ **/
 public class Abilities {
     private  String name;
     private String type;
-    //cost from stat pool of [type]
+
     private int cost;
-    private String description;
+    private final String description;
+    //Default constructor creates a 'tag' Object as a placeholder when player input is needed.
     public Abilities() {
         this.name = "tag";
         this.type = "tag";
@@ -31,4 +35,11 @@ public class Abilities {
         return cost;
     }
 
+    @Override
+    public String toString() {
+        return name + ": " +
+                ", type='" + type  +
+                ", cost=" + cost +
+                "\ndescription='" + description;
+    }
 }

@@ -1,6 +1,11 @@
 package playerMeta;
 
-//built to match json save file
+/**
+Skills are used to modify the difficulty of rolls.
+trained=1 step easier.
+specialized requires training and = 1 additional step easier.
+disability = 1 more difficult on the track.
+*/
 public class Skill {
 
     private String name;
@@ -44,5 +49,13 @@ public class Skill {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return name + ": " +
+                ", trained=" + trained +
+                ", specialized=" + specialized +
+                ", disability=" + disability;
     }
 }

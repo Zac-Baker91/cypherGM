@@ -8,6 +8,8 @@ public class Main {
 
         //control bool for options loop
         boolean optErr = true;
+        //ten player is a lot of people at the table
+        Player[] playArray = new Player[10];
 
         Scanner stdin = new Scanner(System.in);
         System.out.println("Welcome the playerMeta.Cypher System Game Management.");
@@ -41,26 +43,27 @@ public class Main {
                     focus = stdin.nextLine();
                     Player n00b = new Player(name, descriptor, type, focus);
                     //warrior player should be able to choose either edge in might or speed
-                    if ((n00b.getType()).equals("warrior")) {
+                    if (n00b.getType().getKey().equals("warrior")) {
                         System.out.println("Warrior choose : [1]might or [2]speed");
                         int p = stdin.nextInt();
                         stdin.nextLine();
-                        if (p == 1) n00b.modifyMightEdge(1);
-                        else if (p == 2) n00b.modifySpeedEdge(1);
+                        if (p == 1) n00b.getType().getMight().modEdge(1);
+                        else if (p == 2) n00b.getType().getSpeed().modEdge(1);
                         else System.out.println("Bad input now you are weak and slow LOLz");
                     }
+                    //todo finished array assignment should find first null space in array
+                    playArray[0] = n00b;
+
                     // todo Player need to choose specifics items, using item tags with name = tag as place holder.
 
                     //todo Player chooses from ability list, using tags for abilities array.
 
                     //todo non-standard player types need to be re-constructed with standard types.
-
-                    //todo modifier player based on Descriptor
-
-                    //todo modifier player based on Foci
+                    
 
 
                     System.out.println("Welcome "+n00b.getDescription());
+
                     System.out.println("============================================================");
 
                 }
@@ -68,6 +71,10 @@ public class Main {
                     //put the NPC creation methode here
                     System.out.println("This is where NPC creation will be");
                     System.out.println("============================================================");
+                }
+                case 3-> {
+                    //todo search full array
+                    playArray[0].display();
                 }
                 default -> System.out.print("\nOops: invalid entry. [try again]\n");
             }

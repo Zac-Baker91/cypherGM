@@ -17,6 +17,13 @@ public class Stat {
         edge = e;
     }
 
+    @Override
+    public String toString() {
+        return "currentPool: " + currentPool +
+                ", edge: " + edge +
+                ", maxPool: " + maxPool;
+    }
+
     public int getCurrentPool() {
         return currentPool;
     }
@@ -40,4 +47,9 @@ public class Stat {
     public void setMaxPool(int maxPool) {
         this.maxPool = maxPool;
     }
+
+    public void modEdge(int mod){
+        this.edge = this.edge + mod;
+    }
 }
+
