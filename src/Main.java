@@ -1,13 +1,17 @@
+
+import java.io.IOException;
 import java.util.Scanner;
 
-// playerMeta.Cypher Game Manager
-//A game management assistant for the table-top RPG system "cypher system" by Monte cook
-// Program written by Zac Baker
+/**
+ Cypher Game Manager
+    A game management assistant for the table-top RPG system "cypher system" by Monte cook
+    Program written by Zac Baker
+ */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //control bool for options loop
-        boolean optErr = true;
+        boolean optExit = true;
         //ten player is a lot of people at the table
         Player[] playArray = new Player[10];
 
@@ -15,8 +19,11 @@ public class Main {
         System.out.println("Welcome the playerMeta.Cypher System Game Management.");
 
         //input checking loop - switch allows for easy addition or removal of options
-        while (optErr) {
-            System.out.print("Select on option bellow (enter number)\n[1] Player Creation    [2] NPC Creation\n");
+        while (optExit) {
+            System.out.print("""
+                    Select on option bellow (enter number)
+                    [1] Player Creation    [2] Load Player    [3]View Player   [0]Exit
+                    """);
             String selection = stdin.nextLine();
             int selectNum;
             try{
@@ -51,6 +58,7 @@ public class Main {
                         else if (p == 2) n00b.getType().getSpeed().modEdge(1);
                         else System.out.println("Bad input now you are weak and slow LOLz");
                     }
+                    n00b.savePlayer();
                     //todo finished array assignment should find first null space in array
                     playArray[0] = n00b;
 
@@ -59,7 +67,7 @@ public class Main {
                     //todo Player chooses from ability list, using tags for abilities array.
 
                     //todo non-standard player types need to be re-constructed with standard types.
-                    
+
 
 
                     System.out.println("Welcome "+n00b.getDescription());
@@ -75,6 +83,9 @@ public class Main {
                 case 3-> {
                     //todo search full array
                     playArray[0].display();
+                }
+                case 0 -> {
+                    optExit = false;
                 }
                 default -> System.out.print("\nOops: invalid entry. [try again]\n");
             }

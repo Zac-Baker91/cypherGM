@@ -1,7 +1,13 @@
 
 
 //-- later dev note: consider adding synonym list checker for the main types to add versatility
+import com.google.gson.Gson;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import playerMeta.*;
 
@@ -12,7 +18,6 @@ public class Player {
     private final String name;
     private final String description;
 
-    private final Descriptor descriptor;
     private final Focus focus;
     private Type type;
     private Stat Might, Speed, Intellect;
@@ -35,7 +40,7 @@ public class Player {
 
         this.description = name + " is a " + descriptor + " " + type + " who " + focus + "!";
         this.type = new Type(type);
-        this.descriptor = Descriptor.keyNameof(descriptor);
+        Descriptor descriptor1 = Descriptor.keyNameof(descriptor);
         //for the simple builder these values are hard coded later it will need user input
         this.focus = new Focus(
                 new Abilities[]{new Abilities("Blue Steal","intellect",1,
@@ -48,11 +53,16 @@ public class Player {
                 new Abilities[]{new Abilities("test","test",0,"test")}
         );
 
-        assert this.descriptor != null;
-        Abilities[] tmpA = abilityCat(this.type.getAbilitiesArray(),this.descriptor.abilityArray);
+        assert descriptor1 != null;
+        this.type.getIntellect().modMaxPool(descriptor1.intellectMod);
+        this.type.getMight().modMaxPool(descriptor1.mightMod);
+        this.type.getSpeed().modMaxPool(descriptor1.speedMod);
+
+
+        Abilities[] tmpA = abilityCat(this.type.getAbilitiesArray(), descriptor1.abilityArray);
         abilityCat(this.focus.tierOne(),tmpA);
 
-        skillCat(this.type.getSkillArray(), this.descriptor.skillsArray);
+        skillCat(this.type.getSkillArray(), descriptor1.skillsArray);
 
 
     }
@@ -128,9 +138,28 @@ public class Player {
         this.skillArray =  result;
         return result;
     }
+    public void savePlayer() throws IOException {
+        Gson file = new Gson();
+        Path currentRelativePath = Paths.get("");
+        String fullPath = currentRelativePath.toAbsolutePath().toString();
+        System.out.println("Current absolute path is: " + fullPath);
+        String fileName = fullPath+"/src/savefiles/"+this.name+".json";
+        String saveFile = file.toJson(this);
+
+        System.out.println("Player Saved to: "+ fileName);
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+
+        writer.write(saveFile);
+
+        writer.close();
+    }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getTier() {
