@@ -1,18 +1,17 @@
-
+package playerMeta;
 
 //-- later dev note: consider adding synonym list checker for the main types to add versatility
-import com.google.gson.Gson;
+import JsonOI.JsonLoad;
+import JsonOI.JsonSave;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
-import playerMeta.*;
+
+
 
 /**
- * Player is the main object that contains all the information that would be found a typical player's character sheet.
+ * playerMeta.Player is the main object that contains all the information that would be found a typical player's character sheet.
  */
 public class Player {
     private final String name;
@@ -30,6 +29,7 @@ public class Player {
     //This is not a game for loot goblins. element 0 should be reserve for player clothing(even if they are nude)
     private Cypher[] cypherArray = new Cypher[4];
     private int maxCypher;
+
 
 
     public Player(String name, String descriptor, String type, String focus) {
@@ -81,7 +81,6 @@ public class Player {
             }//else{
                 //DEBUG line for arrays
                 //System.out.println("NULL");
-
             //}
         }
         System.out.println("Abilities: ");
@@ -113,7 +112,6 @@ public class Player {
             result[pos] = e;
             pos++;
         }
-
         for (Abilities e : a2) {
             result[pos] = e;
             pos++;
@@ -139,20 +137,10 @@ public class Player {
         return result;
     }
     public void savePlayer() throws IOException {
-        Gson file = new Gson();
-        Path currentRelativePath = Paths.get("");
-        String fullPath = currentRelativePath.toAbsolutePath().toString();
-        System.out.println("Current absolute path is: " + fullPath);
-        String fileName = fullPath+"/src/savefiles/"+this.name+".json";
-        String saveFile = file.toJson(this);
-
-        System.out.println("Player Saved to: "+ fileName);
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-
-        writer.write(saveFile);
-
-        writer.close();
+        JsonSave output = new JsonSave();
+        output.save(this,this.name);
     }
+
 
     public String getDescription() {
         return description;
