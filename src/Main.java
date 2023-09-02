@@ -1,5 +1,10 @@
 
 import JsonOI.JsonLoad;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import playerMeta.Abilities;
 import playerMeta.Player;
 
@@ -12,10 +17,34 @@ import java.util.Scanner;
     A game management assistant for the table-top RPG system "cypher system" by Monte cook
     Program written by Zac Baker
  */
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class Main extends Application{
 
-        //control bool for options loop
+    Button button1;
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle("Cypher Game Master");
+
+        button1 = new Button("compile test");
+
+        StackPane layout = new StackPane();
+        layout.getChildren().add(button1);
+
+        Scene openingScene = new Scene(layout,300,250);
+        primaryStage.setScene(openingScene);
+        primaryStage.show();
+
+    }
+
+    public static void fociBuilder(Scanner stdin){
+        System.out.print("Hey GM before you start building players you need to set up their foci options. Let's GO! ");
+
+    }
+    private static void console() throws IOException {
+//control bool for options loop
         boolean optExit = true;
         //ten player is a lot of people at the table
         Player[] playArray = new Player[10];
@@ -130,10 +159,5 @@ public class Main {
         }
 
         stdin.close();
-    }
-
-    public static void fociBuilder(Scanner stdin){
-        System.out.print("Hey GM before you start building players you need to set up their foci options. Let's GO! ");
-
     }
 }
