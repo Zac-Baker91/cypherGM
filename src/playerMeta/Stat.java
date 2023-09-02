@@ -28,8 +28,8 @@ public class Stat {
         return currentPool;
     }
 
-    public void setCurrentPool(int currentPool) {
-        this.currentPool = currentPool;
+    public void modCurrentPool(int currentPool) {
+        this.currentPool = this.currentPool+currentPool;
     }
 
     public int getEdge() {
@@ -44,8 +44,9 @@ public class Stat {
         return maxPool;
     }
 
-    public void setMaxPool(int maxPool) {
-        this.maxPool = maxPool;
+    public void modMaxPool(int maxPool) {
+        this.maxPool = this.maxPool + maxPool;
+        this.currentPool = this.currentPool+maxPool;
     }
 
     public void modEdge(int mod){

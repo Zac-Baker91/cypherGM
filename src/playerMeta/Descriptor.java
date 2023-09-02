@@ -1,6 +1,6 @@
 package playerMeta;
 
-import java.util.InputMismatchException;
+
 
 /***
  * This enumeration contains the metadata for all the cypher system character descriptors:
@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
 public enum Descriptor {
 
     APPEALING(
-            "Appealing",
+            "appealing",
             new Skill[]{
                     new Skill("pleasant social interactions",true, false,false),
                     new Skill("resisting any kind of persuasion",true,false,false)
@@ -19,7 +19,7 @@ public enum Descriptor {
             0,0,1
     ),
     BENEFICENT(
-            "Beneficent",
+            "beneficent",
             new Skill[]{
                     new Skill("pleasant social interactions",true, false,false),
                     new Skill("gaining trust",true,false,false),
@@ -38,14 +38,14 @@ public enum Descriptor {
             },
             0,0,0
     ),
-    BRASH("Brash",
+    BRASH("brash",
             new Skill[]{
                     new Skill("initiative",true, false, false),
                     new Skill("overcoming fear",true, false,false),
             },
             new Abilities[]{},
             0,2,0 ),
-    CALM("Calm",
+    CALM("calm",
             new Skill[]{
                     new Skill(), new Skill(), new Skill(), new Skill(),
                     new Skill("All physical attacks",false,false,true),
@@ -63,7 +63,7 @@ public enum Descriptor {
             },
             0,0,2
     ),
-    CHAOTIC("Chaotic",
+    CHAOTIC("chaotic",
             new Skill[]{
                     new Skill("Mental Defence",true,false,false),
                     new Skill("Might Defense",false,false,true)
@@ -75,7 +75,7 @@ public enum Descriptor {
                             " the GM presents you with a GM intrusion.")
             },
             0,4,0 ),
-    CHARMING(" Charming",
+    CHARMING(" charming",
             new Skill[]{
                     new Skill("pleasant social interaction",true,false,false),
                     new Skill("influence the minds of others",true,false,false),
@@ -85,7 +85,7 @@ public enum Descriptor {
                     new Abilities("Contact","description",0,"You have a friend in high places.")
             },
             0,0,2 ),
-    CLEVER("Clever",
+    CLEVER("clever",
             new Skill[]{
                     new Skill("trickery",true,false,false),
                     new Skill("resist mental effects", true, false,false),
@@ -94,7 +94,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,2 ),
-    CLUMSY("Clumsy",
+    CLUMSY("clumsy",
             new Skill[]{
                     new Skill("pleasant social interactions",true,false,false),
                     new Skill("breaking things",true,false,false),
@@ -108,7 +108,7 @@ public enum Descriptor {
                                     " your clumsiness works to your advantage.")
             },
             2,-2,0 ),
-    CRAVEN("Craven",
+    CRAVEN("craven",
             new Skill[]{
                     new Skill("Stealth",true,false,false),
                     new Skill("Running",true,false,false),
@@ -119,7 +119,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,2,0 ),
-    CREATIVE("Creative",
+    CREATIVE("creative",
             new Skill[]{
                     new Skill("Story Telling",true,false,false),
                     new Skill("Artistic",true,false,false),
@@ -129,7 +129,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,2 ),
-    CRUEL("Cruel",
+    CRUEL("cruel",
             new Skill[]{
                     new Skill("Influencing people experiencing physical or emotional pain",true,false,false),
                     new Skill("Sensing motives, feelings, or disposition of others",false,false,true),
@@ -142,7 +142,7 @@ public enum Descriptor {
                                     "to make your next action against that foe easier by on step.")
             },
             0,0,2 ),
-    DISHONORABLE("Dishonorable",
+    DISHONORABLE("dishonorable",
             new Skill[]{
                     new Skill("Deception",true,false,false),
                     new Skill("Stealth",true,false,false),
@@ -155,7 +155,7 @@ public enum Descriptor {
                                     " a GM intrusion, that player cannot give it to you.")
             },
             0,4,0 ),
-    DOOMED("Doomed",
+    DOOMED("doomed",
             new Skill[]{
                     new Skill("Perception",true,false,false),
                     new Skill("Speed defense",true,false,false),
@@ -168,7 +168,7 @@ public enum Descriptor {
                                     " This is because you are doomed.")
             },
             0,2,0 ),
-    EMPATHIC("Empathic",
+    EMPATHIC("empathic",
             new Skill[]{
                     new Skill("Sensing motives, feelings, or disposition of others",true,false,false),
                     new Skill("Social interaction",true,false,false),
@@ -176,7 +176,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,4 ),
-    EXILED("Exiled",
+    EXILED("exiled",
             new Skill[]{
                     new Skill("Sneaking",true,false,false),
                     new Skill("Wilderness Survival",true,false,false),
@@ -188,7 +188,7 @@ public enum Descriptor {
                                     " who is trained or specialized in that task.")
             },
             2,0,0 ),
-    FAST("Fast",
+    FAST("fast",
             new Skill[]{
                     new Skill("Running",true,false,false),
                     new Skill("Social interaction",false,false,true),
@@ -200,7 +200,7 @@ public enum Descriptor {
                                     " needing to make any kind of roll.")
             },
             0,2,0 ),
-    FOOLISH("Foolish",
+    FOOLISH("foolish",
             new Skill[]{
                     new Skill("Intellect defense",false,false,true),
                     new Skill("Sensing deceptions, illusions, or traps",false,false,true),
@@ -214,7 +214,7 @@ public enum Descriptor {
                                     "it costs you 1 more point than usual."),
             },
             0,0,-4 ),
-    GRACEFUL("Graceful",
+    GRACEFUL("graceful",
             new Skill[]{
                     new Skill("Balance",true,false,false),
                     new Skill("Physical performing arts",true,false,false),
@@ -222,7 +222,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,2,0 ),
-    GUARDED("Guarded",
+    GUARDED("guarded",
             new Skill[]{
                     new Skill("Intellect defense",true,false,false),
                     new Skill("Discerning the truth",true,false,false),
@@ -230,7 +230,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,2 ),
-    HARDY("Hardy",
+    HARDY("hardy",
             new Skill[]{
                     new Skill("Might defense",true,false,false),
                     new Skill("Initiative",false,false,true),
@@ -247,7 +247,7 @@ public enum Descriptor {
                                     "you must spend 1 extra point from your Speed Pool."),
             },
             4,0,0 ),
-    HIDEOUS("Hideous",
+    HIDEOUS("hideous",
             new Skill[]{
                     new Skill("Disguise",true,false,false),
                     new Skill("Deception/Persuasion",false,false,true),
@@ -257,14 +257,14 @@ public enum Descriptor {
                             "Any time a NPC sees your real face they will fear you as if you where a monster"),
             },
             2,2,2 ),
-    HONORABLE("Honorable",
+    HONORABLE("honorable",
             new Skill[]{
                     new Skill("Pleasant social interactions",true,false,false),
                     new Skill("Discerning the motives",true,false,false),
             },
             new Abilities[]{},
             2,0,0 ),
-    IMPULSIVE("Impulsive",
+    IMPULSIVE("impulsive",
             new Skill[]{
                     new Skill("Initiative",true,false,false),
                     new Skill("Speed defense",true,false,false),
@@ -272,7 +272,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,2,0 ),
-    INQUISITIVE("Appealing",
+    INQUISITIVE("appealing",
             new Skill[]{
                     new Skill("Learning something new",true,false,false),
                     new Skill("geography/history",true,false,false),
@@ -281,13 +281,13 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,4 ),
-    INTELLIGENT("Intelligent",
+    INTELLIGENT("intelligent",
             new Skill[]{
                     new Skill("Remembering",true,false,false),
             },
             new Abilities[]{}
             ,0,0,5 ),
-    INTUITIVE("Intuitive",
+    INTUITIVE("intuitive",
             new Skill[]{
                     new Skill("Perception",true,false,false)
             },
@@ -299,7 +299,7 @@ public enum Descriptor {
                                     " renewed each time you make a recovery roll.")
             },
             0,0,2 ),
-    JOVIAL("Jovial",
+    JOVIAL("jovial",
             new Skill[]{
                     new Skill("Pleasant social interaction",true,false,false),
                     new Skill("Solving puzzles/riddles",true,false,false),
@@ -307,7 +307,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,2 ),
-    KIND("Kind",
+    KIND("kind",
             new Skill[]{
                     new Skill("Pleasant social interaction",true,false,false),
                     new Skill("Discerning the dispositions",false,false,true)
@@ -319,14 +319,14 @@ public enum Descriptor {
                                     "and the GM determines the nature of the aid you gain.")
             },
             0,0,2 ),
-    LEARNED("Learned",
+    LEARNED("learned",
             new Skill[]{
                     new Skill("Knowledge of the world",true,false,false),
                     new Skill("Charm/persuasion/etiquette",false,false,true)
             },
             new Abilities[]{},
             0,0,2 ),
-    LUCKY("Lucky",
+    LUCKY("lucky",
             new Skill[]{},
             new Abilities[]{
                     new Abilities("Luck Pool","description",0,
@@ -339,7 +339,7 @@ public enum Descriptor {
                                     " add 3 to the re-roll.")
             },
             0,0,0 ),
-    MAD("Mad",
+    MAD("mad",
             new Skill[]{
                     new Skill("Intimidation",true,false,false),
                     new Skill("Intellect defense",false,false,true)
@@ -360,14 +360,14 @@ public enum Descriptor {
                                     " harmful to you unless there are extenuating circumstances.")
             },
             0,0,4 ),
-    MECHANICAL("Mechanical",
+    MECHANICAL("mechanical",
             new Skill[]{
                     new Skill("Identifying machines",true,false,false),
                     new Skill("Using/Repairing/Crafting machines",true,false,false),
             },
             new Abilities[]{},
             0,0,2 ),
-    MYSTERIOUS("Mysterious",
+    MYSTERIOUS("mysterious",
             new Skill[]{
                     new Skill("Stealth",true,false,false),
                     new Skill("Resisting interrogation",true,false,false),
@@ -382,7 +382,7 @@ public enum Descriptor {
                                     " This ability refreshes every time you make a recovery roll"),
             },
             0,0,0 ),
-    MYSTICAL("Mystical",
+    MYSTICAL("mystical",
             new Skill[]{
                     new Skill("Understanding the supernatural",true,false,false),
                     new Skill("Charm/persuasion/etiquette",false,false,true)
@@ -396,7 +396,7 @@ public enum Descriptor {
                             "You preform wild magic(whatever that mean in the context of your game).")
             },
             0,0,2 ),
-    NAIVE("Naive",
+    NAIVE("naive",
             new Skill[]{
                     new Skill("Perception",true,false,false),
                     new Skill("determining motive",false,false,true)
@@ -410,7 +410,7 @@ public enum Descriptor {
                             "You can preform wild magic.")
             },
             0,0,0 ),
-    PERCEPTIVE("Perceptive",
+    PERCEPTIVE("perceptive",
             new Skill[]{
                     new Skill("Perception",true,true,false),
                     new Skill("Intimidation",true,false,false),
@@ -418,7 +418,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,2 ),
-    RESILIENT("Resilient",
+    RESILIENT("resilient",
             new Skill[]{
                     new Skill("Might defense",true,false,false),
                     new Skill("Intellect defense",true,false,false),
@@ -429,7 +429,7 @@ public enum Descriptor {
                             "You can make an extra recovery roll each day. This roll is just one action."),
             },
             2,0,2 ),
-    RISKY("Risk Taking",
+    RISKY("risk taking",
             new Skill[]{
                     new Skill("Actions involving chance",true,false,false),
                     new Skill("Sneaking",false,false,true)
@@ -443,7 +443,7 @@ public enum Descriptor {
                                     " you make a ten-hour recovery roll.")
             },
             0,4,0 ),
-    RUGGED("Rugged",
+    RUGGED("rugged",
             new Skill[]{
                     new Skill("Athletics",true,false,false),
                     new Skill("Handling animals",true,false,false),
@@ -452,7 +452,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,0 ),
-    SHARPEYED("Sharp-eyed",
+    SHARPEYED("sharp-eyed",
             new Skill[]{
                     new Skill("Initiative",true,false,false),
                     new Skill("Perception",true,false,false),
@@ -462,14 +462,14 @@ public enum Descriptor {
                             "If an opponent has a straightforward weakness, the GM will tell you what it is.")
             },
             0, 0, 0 ),
-    SKEPTICAL("Appealing",
+    SKEPTICAL("appealing",
             new Skill[]{
                     new Skill("Identifying",true,false,false),
                     new Skill("Seeing through tricks, illusions, lies",true,false,false),
             },
             new Abilities[]{},
             0, 0, 2 ),
-    STEALTHY("Stealthy",
+    STEALTHY("stealthy",
             new Skill[]{
                     new Skill("Stealth",true,false,false),
                     new Skill("Deception",true,false,false),
@@ -477,7 +477,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,2,0 ),
-    STRONG("Strong",
+    STRONG("strong",
             new Skill[]{
                     new Skill("Breaking inanimate objects",true,false,false),
                     new Skill("Jumping",true,false,false),
@@ -485,7 +485,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             4,0,0 ),
-    STRONGWILLED("Strong Willed",
+    STRONGWILLED("strong willed",
             new Skill[]{
                     new Skill("Intellect Defence",true,false,false),
                     new Skill("Concentration",true,false,false),
@@ -493,7 +493,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,0,4 ),
-    SWIFT("Swift",
+    SWIFT("swift",
             new Skill[]{
                     new Skill("Initiative",true,false,false),
                     new Skill("Running",true,false,false),
@@ -501,7 +501,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             0,4,0 ),
-    TONGUETIED("Tongue-Tied",
+    TONGUETIED("tongue-tied",
             new Skill[]{
                     new Skill("Perception",true,false,false),
                     new Skill("Initiative",true,false,false),
@@ -510,7 +510,7 @@ public enum Descriptor {
             },
             new Abilities[]{},
             2,2,0 ),
-    TOUGH("Tough",
+    TOUGH("tough",
             new Skill[]{
                     new Skill("Might defense",true,false,false)
             },
@@ -521,7 +521,7 @@ public enum Descriptor {
                             "Add 1 to the points you regain when you make a recovery roll.")
             },
             0,0,0 ),
-    VICIOUS("Vicious",
+    VICIOUS("vicious",
             new Skill[]{
                     new Skill("Tracking creatures",true,false,false)
             },
@@ -535,14 +535,14 @@ public enum Descriptor {
                                     "you attack the nearest ally within short range.")
             },
             0,0,0 ),
-    VIRTUOUS("Virtuous",
+    VIRTUOUS("virtuous",
             new Skill[]{
                     new Skill("Sense Motive",true,false,false),
                     new Skill("Intellect defense",true,false,false)
             },
             new Abilities[]{},
             2,0,0 ),
-    WEIRD("Weird",
+    WEIRD("weird",
             new Skill[]{
                     new Skill("Supernatural knowledge",true,false,false),
                     new Skill("Pleasant social interaction",false,false,true)
@@ -566,8 +566,6 @@ public enum Descriptor {
         }
         return null;
     }
-
-
 
     public final String keyName;
     public final Skill[] skillsArray;

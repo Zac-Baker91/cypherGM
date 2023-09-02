@@ -1,18 +1,22 @@
-
+package playerMeta;
 
 //-- later dev note: consider adding synonym list checker for the main types to add versatility
+import JsonOI.JsonLoad;
+import JsonOI.JsonSave;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
-import playerMeta.*;
+
 
 /**
- * Player is the main object that contains all the information that would be found a typical player's character sheet.
+ * playerMeta.Player is the main object that contains all the information that would be found a typical player's character sheet.
  */
 public class Player {
     private final String name;
     private final String description;
 
-    private final Descriptor descriptor;
     private final Focus focus;
     private Type type;
     private Stat Might, Speed, Intellect;
@@ -27,6 +31,7 @@ public class Player {
     private int maxCypher;
 
 
+
     public Player(String name, String descriptor, String type, String focus) {
         this.name = name;
         this.effort = 1;
@@ -35,7 +40,7 @@ public class Player {
 
         this.description = name + " is a " + descriptor + " " + type + " who " + focus + "!";
         this.type = new Type(type);
-        this.descriptor = Descriptor.keyNameof(descriptor);
+        Descriptor descriptor1 = Descriptor.keyNameof(descriptor);
         //for the simple builder these values are hard coded later it will need user input
         this.focus = new Focus(
                 new Abilities[]{new Abilities("Blue Steal","intellect",1,
@@ -48,11 +53,16 @@ public class Player {
                 new Abilities[]{new Abilities("test","test",0,"test")}
         );
 
-        assert this.descriptor != null;
-        Abilities[] tmpA = abilityCat(this.type.getAbilitiesArray(),this.descriptor.abilityArray);
+        assert descriptor1 != null;
+        this.type.getIntellect().modMaxPool(descriptor1.intellectMod);
+        this.type.getMight().modMaxPool(descriptor1.mightMod);
+        this.type.getSpeed().modMaxPool(descriptor1.speedMod);
+
+
+        Abilities[] tmpA = abilityCat(this.type.getAbilitiesArray(), descriptor1.abilityArray);
         abilityCat(this.focus.tierOne(),tmpA);
 
-        skillCat(this.type.getSkillArray(), this.descriptor.skillsArray);
+        skillCat(this.type.getSkillArray(), descriptor1.skillsArray);
 
 
     }
@@ -71,7 +81,6 @@ public class Player {
             }//else{
                 //DEBUG line for arrays
                 //System.out.println("NULL");
-
             //}
         }
         System.out.println("Abilities: ");
@@ -103,7 +112,6 @@ public class Player {
             result[pos] = e;
             pos++;
         }
-
         for (Abilities e : a2) {
             result[pos] = e;
             pos++;
@@ -128,9 +136,18 @@ public class Player {
         this.skillArray =  result;
         return result;
     }
+    public void savePlayer() throws IOException {
+        JsonSave output = new JsonSave();
+        output.save(this,this.name);
+    }
+
 
     public String getDescription() {
         return description;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getTier() {

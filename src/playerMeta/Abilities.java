@@ -23,6 +23,8 @@ public class Abilities {
         this.description = description;
     }
 
+
+
     public String getName() {
         return name;
     }
