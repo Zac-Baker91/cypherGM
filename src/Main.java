@@ -1,6 +1,9 @@
 
 import JsonOI.JsonLoad;
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import playerMeta.Abilities;
 import playerMeta.Player;
@@ -14,13 +17,25 @@ import java.util.Scanner;
     A game management assistant for the table-top RPG system "cypher system" by Monte cook
     Program written by Zac Baker
  */
-public abstract class Main extends Application{
+public class Main extends Application{
+
+    Button button1;
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle("Cypher Game Master");
+
+        button1 = new Button("compile test");
+
+        StackPane layout = new StackPane();
+        layout.getChildren().add(button1);
+
+        Scene openingScene = new Scene(layout,300,250);
+        primaryStage.setScene(openingScene);
+        primaryStage.show();
 
     }
 
