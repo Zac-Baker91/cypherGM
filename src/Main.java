@@ -3,7 +3,8 @@ import JsonOI.JsonLoad;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import playerMeta.Abilities;
 import playerMeta.Player;
@@ -19,19 +20,31 @@ import java.util.Scanner;
  */
 public class Main extends Application{
 
-    Button button1;
+    Button buttonNPC;
+    Button buttonUpload;
+    Button buttonViewNPC;
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        BackStage stageHand = new BackStage(primaryStage);
+
         primaryStage.setTitle("Cypher Game Master");
+        Label title = new Label("Main Menu");
+        buttonNPC = new Button("Build NPC");
+        buttonNPC.setOnAction(e->stageHand.buildNPC());
+        buttonUpload = new Button("Upload NPC");
+        buttonUpload.setOnAction(e-> stageHand.loadNPC());
+        buttonViewNPC = new Button("View NPC");
+        buttonViewNPC.setOnAction(e -> stageHand.viewNPCs());
 
-        button1 = new Button("compile test");
 
-        StackPane layout = new StackPane();
-        layout.getChildren().add(button1);
+
+        VBox layout = new VBox(20);
+        layout.getChildren().addAll(title,buttonNPC,buttonUpload,buttonViewNPC);
 
         Scene openingScene = new Scene(layout,300,250);
         primaryStage.setScene(openingScene);
