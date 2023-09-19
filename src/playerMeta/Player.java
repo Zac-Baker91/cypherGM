@@ -53,6 +53,7 @@ public class Player {
                 new Abilities[]{new Abilities("test","test",0,"test")}
         );
 
+
         assert descriptor1 != null;
         this.type.getIntellect().modMaxPool(descriptor1.intellectMod);
         this.type.getMight().modMaxPool(descriptor1.mightMod);
@@ -194,4 +195,7 @@ public class Player {
             return this.abilitiesArray;
     }
 
+    public Focus getFocus() {
+        return focus;
+    }
 }
