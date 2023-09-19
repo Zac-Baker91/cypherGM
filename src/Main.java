@@ -1,10 +1,6 @@
 
 import JsonOI.JsonLoad;
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import playerMeta.Abilities;
 import playerMeta.Player;
@@ -20,9 +16,7 @@ import java.util.Scanner;
  */
 public class Main extends Application{
 
-    Button buttonNPC;
-    Button buttonUpload;
-    Button buttonViewNPC;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -33,22 +27,8 @@ public class Main extends Application{
         BackStage stageHand = new BackStage(primaryStage);
 
         primaryStage.setTitle("Cypher Game Master");
-        Label title = new Label("Main Menu");
-        buttonNPC = new Button("Build NPC");
-        buttonNPC.setOnAction(e->stageHand.buildNPC());
-        buttonUpload = new Button("Upload NPC");
-        buttonUpload.setOnAction(e-> stageHand.loadNPC());
-        buttonViewNPC = new Button("View NPC");
-        buttonViewNPC.setOnAction(e -> stageHand.viewNPCs());
+        stageHand.raiseCurtain();
 
-
-
-        VBox layout = new VBox(20);
-        layout.getChildren().addAll(title,buttonNPC,buttonUpload,buttonViewNPC);
-
-        Scene openingScene = new Scene(layout,300,250);
-        primaryStage.setScene(openingScene);
-        primaryStage.show();
 
     }
 
