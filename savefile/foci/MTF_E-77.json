@@ -1,0 +1,51 @@
+{
+    "name":"MTF_E-77",
+    "tierOne":[
+      {
+        "name":"World Theologin",
+        "type":"intellect",
+        "cost":1,
+        "description":"Identifies if anomaly has religious oragins"
+      }
+    ],
+    "tierTwo":[
+      {
+        "name":"Knowlege if the occult",
+        "type":"intellect",
+        "cost":2,
+        "description":"Reduce difficulty by 2 steps for intellect based action involving the occult."
+      }
+    ],
+    "tierThree": [
+      {
+        "name":"Unshaking faith",
+        "type":"intellect",
+        "cost":3,
+        "description":"You are immune to influence of religios artifacts."
+      }
+    ],
+    "tierFour":[
+      {
+        "name":"Power of faith",
+        "type":"might",
+        "cost":4,
+        "description":"over come your physical limits susceed at on might bases action or check"
+      }
+    ],
+    "tierFive":[
+      {
+        "name":"Cult leaders charisma",
+        "type":"intellect",
+        "cost":4,
+        "description":"Convince one person of something no matter how strange."
+      }
+    ],
+    "tierSix":[
+      {
+        "name":"Amass a following",
+        "type":"intellect",
+        "cost":5,
+        "description":"Convince an NPC to follow you and do your bidding"
+      }
+    ]
+}

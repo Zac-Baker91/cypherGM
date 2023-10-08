@@ -1,0 +1,51 @@
+{
+    "name":"d-class",
+    "tierOne":[
+      {
+        "name":"running head start",
+        "type":"speed",
+        "cost":1,
+        "description":"When running away you where the first to start running and you run alittle faster."
+      }
+    ],
+    "tierTwo":[
+      {
+        "name":"nothing to loss",
+        "type":"intellect",
+        "cost":2,
+        "description":"You can remove any metal resistance to prefoming an action. (ex: chopping of your arm off gets 1 degree easier)"
+      }
+    ],
+    "tierThree": [
+      {
+        "name":"Prison Power",
+        "type":"might",
+        "cost":3,
+        "description":"makes might based action 1 degree easier"
+      }
+    ],
+    "tierFour":[
+      {
+        "name":"Human Test Subject",
+        "type":"intellect",
+        "cost":3,
+        "description":"You have been exposed to all manner of horror, this give you insight into how to surive the unknown"
+      }
+    ],
+    "tierFive":[
+      {
+        "name":"Expert Dodge",
+        "type":"speed",
+        "cost":5,
+        "description":"You dodge it. Thats how you stay alive"
+      }
+    ],
+    "tierSix":[
+      {
+        "name":"SCP-9341",
+        "type":"aux",
+        "cost":0,
+        "description":"Nobody suvives this long in d-class. You are officaly anomalis..."
+      }
+    ]
+  }

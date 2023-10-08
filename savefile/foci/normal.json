@@ -1,0 +1,57 @@
+{
+    "name":"normal",
+    "tierOne":[
+      {
+        "name":"Secret SCP",
+        "type":"aux",
+        "cost":0,
+        "description":"You are anomalies (write down what makes you anomalis somewhere secret). If discover you can use your SCP power to avoid capture"
+      },
+      {
+        "name":"Blend In",
+        "type":"speed",
+        "cost":1,
+        "description":"You can fade into the background if nobody is interacting with you directly"
+      }
+    ],
+    "tierTwo":[
+      {
+        "name":"converse with the public",
+        "type":"intellect",
+        "cost":1,
+        "description":"It is 1 degree easier to interact with the general public"
+      }
+    ],
+    "tierThree": [
+      {
+        "name":"moves through crowd",
+        "type":"speed",
+        "cost":2,
+        "description":"when in a large group/crowd you can move 1 degree easier"
+      }
+    ],
+    "tierFour":[
+      {
+        "name":"oblivious of the horror",
+        "type":"intellect",
+        "cost":4,
+        "description":"You didn't even notice that blood ozing from the wall or the wispers from that flesh bound book"
+      }
+    ],
+    "tierFive":[
+      {
+        "name":"SCP under cover",
+        "type":"any",
+        "cost":6,
+        "description":"Your SCP nature allows to use your SCP powers on the DL"
+      }
+    ],
+    "tierSix":[
+      {
+        "name":"Surviving in secret",
+        "type":"aux",
+        "cost":0,
+        "description":"If you survived this long without being discover you can use any and all SCP"
+      }
+    ]
+  }

@@ -1,0 +1,51 @@
+{
+    "name":"0-5",
+    "tierOne":[
+      {
+        "name":"Know your anomalies",
+        "type":"intellect",
+        "cost":1,
+        "description":"You are able to identie cataloged SCPs my their id-number."
+      }
+    ],
+    "tierTwo":[
+      {
+        "name":"Sence for aboration",
+        "type":"intellect",
+        "cost":1,
+        "description":"At a glance you can tell what is out of place."
+      }
+    ],
+    "tierThree": [
+      {
+        "name":"Mind like a steel trap",
+        "type":"intellect",
+        "cost":3,
+        "description":"You are immune to amnestics."
+      }
+    ],
+    "tierFour":[
+      {
+        "name":"Intimadating presents",
+        "type":"might",
+        "cost":3,
+        "description":"Your presents ozes the kind of authority that could make someone simple disapear from reality"
+      }
+    ],
+    "tierFive":[
+      {
+        "name":"Super Human Oversight",
+        "type":"speed",
+        "cost":5,
+        "description":"You can role back the clock up to 1 min and YOU can take a diffrent action"
+      }
+    ],
+    "tierSix":[
+      {
+        "name":"SCP control",
+        "type":"SCP dependant",
+        "cost":6,
+        "description":"You can force an SCP to take on action"
+      }
+    ]
+}

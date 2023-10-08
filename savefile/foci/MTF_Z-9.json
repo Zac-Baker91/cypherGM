@@ -1,0 +1,51 @@
+{
+    "name":"MTF_Z-9",
+    "tierOne":[
+      {
+        "name":"Good in tight spaceses",
+        "type":"speed",
+        "cost":0,
+        "description":"Reduces difficulty of speed based action in tight spaces"
+      }
+    ],
+    "tierTwo":[
+      {
+        "name":"Terrain Master",
+        "type":"intellect",
+        "cost":2,
+        "description":"You fully understand where you are in space and time where you are"
+      }
+    ],
+    "tierThree": [
+      {
+        "name":"Mind like a steel trap",
+        "type":"might",
+        "cost":0,
+        "description":"You are immune to amnestics."
+      }
+    ],
+    "tierFour":[
+      {
+        "name":"Terrain Maniputor",
+        "type":"might",
+        "cost":3,
+        "description":"You can re-arrange the envinment around you to your advantage."
+      }
+    ],
+    "tierFive":[
+      {
+        "name":"Temporal Ancor",
+        "type":"aux",
+        "cost":0,
+        "description":"Your age is uneffected by untable time space anomolies"
+      }
+    ],
+    "tierSix":[
+      {
+        "name":"Planes Walker",
+        "type":"SCP",
+        "cost":0,
+        "description":"You have spent so much time stairing into the obis that you walk freely through space and time..."
+      }
+    ]
+  }

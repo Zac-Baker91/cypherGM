@@ -42,7 +42,7 @@ public class Player {
         this.type = new Type(type);
         Descriptor descriptor1 = Descriptor.keyNameof(descriptor);
         //for the simple builder these values are hard coded later it will need user input
-        this.focus = new Focus(
+        this.focus = new Focus("name",
                 new Abilities[]{new Abilities("Blue Steal","intellect",1,
                         "Lock eyes with someone and overwhelm them with your Machismo")},
                 new Abilities[]{new Abilities("Force Entry","might",1,
