@@ -1,3 +1,4 @@
+import JsonOI.JsonLoad;
 import JsonOI.JsonSave;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,16 +9,18 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.TilePane;
+
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import playerMeta.Descriptor;
+
 import playerMeta.Focus;
 import playerMeta.Player;
-import playerMeta.Type;
+
 
 import java.io.IOException;
+
 
 
 /**
@@ -46,7 +49,13 @@ public class BackStage {
 
         Label title = new Label("Main Menu");
         buttonNPC = new Button("Build NPC");
-        buttonNPC.setOnAction(e->buildNPC());
+        buttonNPC.setOnAction(e-> {
+            try {
+                buildNPC();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
         buttonUpload = new Button("Upload NPC");
         buttonUpload.setOnAction(e-> loadNPC());
         buttonViewNPC = new Button("View NPC");
@@ -63,12 +72,24 @@ public class BackStage {
         window.setScene(openingScene);
         window.show();
     }
-    private void buildNPC(){
+    private void buildNPC() throws IOException {
 
         System.out.println("Entering character builder");
         JsonSave jsonSave = new JsonSave();
+
+
         //building local data structures
-        String[] focusOption = {"Has a third eye","is O-5","is unShakable", "has been beyond" };
+        Focus[] foci = buildFoci();
+        String[] focusOption = new String[foci.length];
+        int i = 0;
+        for (Focus f:foci) {
+            System.out.println(foci.length);
+            System.out.println("Focus "+i+" name:");
+            System.out.println(f.name());
+            focusOption[i] = f.name();
+            i++;
+        }
+
 
         //building Gui elements
         Label title = new Label("Who are you?: <Name> is a <Descriptor> <Type> who <Focus>");
@@ -104,7 +125,7 @@ public class BackStage {
                 Players[playerCount] = n00b;
                 playerCount++;
                 try {
-                    jsonSave.save(n00b, n00b.getName());
+                    jsonSave.save(n00b.getFocus(), n00b.getName());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -136,7 +157,17 @@ public class BackStage {
     private void loadNPC(){
         System.out.println("Load Save files");
     }
-    private void buildFoci(){
+    private Focus[] buildFoci() throws IOException {
+        JsonLoad jsonLoader = new JsonLoad();
+        Object[] fociObj =  jsonLoader.LoadAllJsonInDirectory("savefile/foci", Focus.class);
+
+        Focus[] foci = new Focus[fociObj.length];
+        int ptr = 0;
+        for(Object fo : fociObj){
+            foci[ptr] = (Focus) fo;
+            ptr++;
+        };
+        return foci;
 
     }
 

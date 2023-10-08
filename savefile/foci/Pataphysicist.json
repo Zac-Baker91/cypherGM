@@ -1,0 +1,51 @@
+{
+    "name":"Pataphysicist",
+    "tierOne":[
+      {
+        "name":"Reality is fiction",
+        "type":"intellect",
+        "cost":1,
+        "description":"1 degree of difficulty reduction when dealing with warpped reality"
+      }
+    ],
+    "tierTwo":[
+      {
+        "name":"Active Narator",
+        "type":"intellect",
+        "cost":3,
+        "description":"Receive a hint from your life's Narator"
+      }
+    ],
+    "tierThree": [
+      {
+        "name":"Well read",
+        "type":"intellect",
+        "cost":1,
+        "description":"Gain knowledge of any one peice of litereture"
+      }
+    ],
+    "tierFour":[
+      {
+        "name":"Plot armor",
+        "type":"any",
+        "cost":3,
+        "description":"if are about to hit 0 in any pool half that damage by using 3 points from another pool."
+      }
+    ],
+    "tierFive":[
+      {
+        "name":"Nerative Injection",
+        "type":"intellect",
+        "cost":4,
+        "description":"Make one addtion to the nartive of the game"
+      }
+    ],
+    "tierSix":[
+      {
+        "name":"Master of you Story",
+        "type":"any",
+        "cost":6,
+        "description":"Completely control the outcome of one full interaction. (cost type depend on what's happening)"
+      }
+    ]
+  }
