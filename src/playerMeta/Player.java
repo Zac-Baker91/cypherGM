@@ -31,6 +31,9 @@ public class Player {
     private int maxCypher;
 
 
+    public Skill[] getSkillArray() {
+        return skillArray;
+    }
 
     public Player(String name, String descriptor, String type, String focus) {
         this.name = name;

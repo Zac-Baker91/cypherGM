@@ -31,7 +31,7 @@ public class Main extends Application{
 
 
     }
-
+//console based implementation code I'm leaving for reference and debug
     public static void fociBuilder(Scanner stdin){
         System.out.print("Hey GM before you start building players you need to set up their foci options. Let's GO! ");
 
@@ -102,11 +102,6 @@ public class Main extends Application{
                         ptrPlayer++;
                     } else System.out.println("Oops: there are already 10 plays, that's the max!");
 
-                    // todo playerMeta.Player need to choose specifics items, using item tags with name = tag as place holder.
-
-                    //todo playerMeta.Player chooses from ability list, using tags for abilities array.
-
-                    //todo non-standard player types need to be re-constructed with standard types.
 
 
 
