@@ -62,14 +62,14 @@ public class Skill {
     public String uiString(){
         String ui = "|";
         if (trained) {
-            ui = ui + "   X    |";
-        } else ui = ui + "         |";
+            ui = ui + "   X      |";
+        } else ui = ui + "           |";
         if(specialized){
-            ui = ui + "   X    |";
-        } else ui = ui + "         |";
+            ui = ui + "        X       |";
+        } else ui = ui + "                 |";
         if(disability){
-            ui = ui + "   X    |";
-        } else ui = ui + "         |";
+            ui = ui + "     X     |";
+        } else ui = ui + "            |";
 
         return ui;
     }

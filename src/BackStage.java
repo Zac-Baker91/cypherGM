@@ -1,14 +1,13 @@
 import JsonOI.JsonLoad;
 import JsonOI.JsonSave;
-import com.sun.prism.paint.Paint;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
 import javafx.scene.paint.Color;
@@ -40,8 +39,9 @@ public class BackStage {
 
 
     int playerCount = 0;
-    int WINDOWHIGHT = 700;
-    int WINDOWWIDTH = 1500;
+    static int WINDOWHIGHT = 700;
+    static int WINDOWWIDTH = 1500;
+    static String MAINIMAGE = "SCP1.png";
 
 
     public BackStage(Stage window) {
@@ -62,8 +62,8 @@ public class BackStage {
 
 
 
-        Label title = new Label("Main Menu");
-        buttonNPC = new Button("Build NPC");
+        
+        buttonNPC = new Button("Build Player");
         buttonNPC.setOnAction(e-> {
             try {
                 buildNPC();
@@ -83,14 +83,33 @@ public class BackStage {
         });
         buttonFoci = new Button("List Foci");
 
+        //Setting GUI Layout
+
+        HBox buttonLayout = new HBox(20);
+        buttonLayout.setBackground(Background.fill(Color.BLACK));
+        buttonLayout.setAlignment(Pos.CENTER);
+        buttonLayout.getChildren().addAll(buttonNPC,buttonUpload,buttonViewPC);
+        ImageView mainImage = new ImageView();
+        TilePane imagePane;
+        try {
+            mainImage.setImage(getImageFromFile(MAINIMAGE));
+            imagePane = new TilePane(mainImage);
+            imagePane.setBackground(Background.fill(Color.BLACK));
 
 
+        } catch (FileNotFoundException e) {
+            imagePane = new TilePane(new Text("oops " + e + "not found!"));
 
-        VBox layout = new VBox(20);
-        layout.getChildren().addAll(title,buttonNPC,buttonUpload,buttonViewPC);
+            System.out.println("no image found:\n"+e);
+        }
+        imagePane.setAlignment(Pos.CENTER);
+        mainImage.setFitHeight(WINDOWHIGHT - buttonLayout.getHeight());
+        mainImage.setPreserveRatio(true);
+
+        VBox layout = new VBox(buttonLayout,imagePane);
+        layout.setBackground(Background.fill(Color.BLACK));
 
         Scene openingScene = new Scene(layout,WINDOWWIDTH,WINDOWHIGHT);
-        openingScene.setFill(Color.BISQUE);
         window.setScene(openingScene);
         window.show();
     }
@@ -119,6 +138,7 @@ public class BackStage {
 
         //Initializing contollers
         BorderPane boarderP = new BorderPane();
+        ScrollPane scroll = new ScrollPane();
         TextField nameField = new TextField("Name");
         ChoiceBox<Descriptor> descriptionBox = new ChoiceBox<>();
         ChoiceBox<String> typeBox = new ChoiceBox<>();
@@ -143,7 +163,9 @@ public class BackStage {
                 System.out.println("Build Character: "+n00b.getDescription());
 
                 BorderPane displayChar = playerStatPane(n00b);
-                boarderP.setCenter(displayChar);
+
+                scroll.setContent(displayChar);
+                boarderP.setCenter(scroll);
                 //add new player to class var Player and saves player to json
                 players[playerCount] = n00b;
                 playerCount++;
@@ -166,12 +188,15 @@ public class BackStage {
         centerB.getChildren().addAll(nameField, descriptionBox,typeBox,focusBox);
         centerB.setAlignment(Pos.CENTER);
 
+
         HBox buildPane = new HBox(buildPlayer,backB);
+        buildPane.setSpacing(5);
         titlePane.getChildren().add(centerB);
         titlePane.setAlignment(Pos.CENTER);
 
         boarderP.setTop(titlePane);
         boarderP.setBottom(buildPane);
+
 
         this.window.setScene(new Scene(boarderP,WINDOWWIDTH,WINDOWHIGHT));
     }
@@ -228,14 +253,14 @@ public class BackStage {
         //Basic Player Info(Top)
         Text playerName = new Text(player.getName());
         Text stat1 = new Text("effort: "+player.getEffort()+"  Tier: "+player.getTier()+"  xp: "+ player.getXp());
-        playerName.setFont(Font.font(null,FontWeight.BOLD, FontPosture.ITALIC,25));
+        playerName.setFont(Font.font(null,FontWeight.BOLD, FontPosture.ITALIC,40));
 
-        stat1.setFont(Font.font("Roboto", FontWeight.BOLD,20));
+        stat1.setFont(Font.font(null, FontWeight.BOLD,20));
 
         //Stat Pool Display(Top)
         VBox might =
                 new VBox(new Text("Might"),
-                        new HBox(new Text("Max: "+player.getType().getMight().getMaxPool()),
+                        new HBox(new Text("Max: "+player.getType().getMight().getMaxPool()+"  "),
                                 new Text("Edge: " + player.getType().getMight().getEdge())),
                         new Text("Current: "+ player.getType().getMight().getCurrentPool())
                         );
@@ -243,15 +268,16 @@ public class BackStage {
         might.setSpacing(5);
         VBox speed =
                 new VBox(new Text("Speed"),
-                        new HBox(new Text("Max: "+player.getType().getSpeed().getMaxPool()),
+                        new HBox(new Text("Max: "+player.getType().getSpeed().getMaxPool()+"  "),
                                 new Text("Edge: " + player.getType().getSpeed().getEdge())),
                         new Text("Current: "+ player.getType().getSpeed().getCurrentPool())
                 );
         speed.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, new CornerRadii(5),Insets.EMPTY)));
         speed.setSpacing(5);
+
         VBox intel =
                 new VBox(new Text("Intellect"),
-                        new HBox(new Text("Max: "+player.getType().getIntellect().getMaxPool()),
+                        new HBox(new Text("Max: "+player.getType().getIntellect().getMaxPool()+"  "),
                                 new Text("Edge: " + player.getType().getIntellect().getEdge())),
                         new Text("Current: "+ player.getType().getIntellect().getCurrentPool())
                 );
@@ -275,28 +301,42 @@ public class BackStage {
             }
         }
         HBox skills = new HBox(title,skillLevel);
+        skills.setPrefWidth(sectionWidth);
+
 
         //Ability Display Box (Center)
         VBox ability = new VBox();
+        ability.setPrefWidth(sectionWidth);
 
         for(Abilities ab:player.getAbilities()){
             if (ab != null) {
-                Text description = new Text(ab.getDescription());
+                Text description = new Text(ab.getDescription()+'\n');
                 description.setWrappingWidth(sectionWidth);
-                ability.getChildren().add(
-                        new VBox(
-                                new Text(ab.getName() + ": [type:" + ab.getType() + "| cost:" + ab.getCost() + "]"),
-                                description
-                                )
-                );
+                Text abilityTitle = new Text(ab.getName() + ": [type: " + ab.getType() + "| cost: " + ab.getCost() + "]");
+                abilityTitle.setFont(Font.font(15));
+                ability.getChildren().add(new VBox(abilityTitle,description));
             }
         }
 
 
         //Bag of Items Display (Left)
         VBox itemBag = new VBox();
+        itemBag.setSpacing(5);
+        itemBag.setPrefWidth(sectionWidth);
+        Text itemTitle = new Text(" Item Bag");
+        itemTitle.setFont(Font.font(20));
+        Text dividerTop = new Text("=-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-=");
+
+        itemBag.getChildren().addAll(itemTitle,dividerTop);
+
+
         for(Item item: player.openItemBag()){
-            if (item != null ) itemBag.getChildren().add(new Text(item.toString()));
+            if (item != null ){
+                Text itemInfo = new Text(item.toString());
+                itemInfo.setWrappingWidth(sectionWidth);
+                Text divider = new Text("=-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-=");
+                itemBag.getChildren().addAll(itemInfo,divider);
+            }
         }
 
 
@@ -307,14 +347,15 @@ public class BackStage {
         playerStat.setLeft(itemBag);
 
 
+
         return playerStat;
     }
 
 
 
 
-    //setBackgroundImage needs work side lined for now
-    private BackgroundImage setBackgroundImage(String filename) throws FileNotFoundException {
+
+    private Image getImageFromFile(String filename) throws FileNotFoundException {
 
         Path currentRelativePath = Paths.get("");
         String fullPath = currentRelativePath.toAbsolutePath().toString();
@@ -325,19 +366,7 @@ public class BackStage {
         FileInputStream input = new FileInputStream(pathFile);
 
         // create a image
-        Image image = new Image(input);
-
-        BackgroundSize bSize = new BackgroundSize(20,20,false,false,false,true);
-
-        BackgroundImage backgroundImage = new BackgroundImage(
-                image,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.CENTER,
-                bSize);
-
-
-        return backgroundImage;
+        return new Image(input);
     }
 
 }

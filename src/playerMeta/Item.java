@@ -68,10 +68,10 @@ public class Item {
 
     @Override
     public String toString() {
-        return  name + '\'' +
-                ", range='" + range + '\'' +
-                ", damage=" + damage +
-                ", durability='" + durability + '\'' +
-                ", description='" + description;
+        return  "  "+name + '\n' +
+                "  Range:  " + range  +
+                "   Damage:  " + damage +
+                "   Durability:  " + durability + '\n' +
+                "  Description:\n\n" + description;
     }
 }
