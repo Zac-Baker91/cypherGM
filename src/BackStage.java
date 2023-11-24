@@ -81,14 +81,18 @@ public class BackStage {
                 throw new RuntimeException(ex);
             }
         });
-        buttonFoci = new Button("List Foci");
+        //Foci builder
+        buttonFoci = new Button("Build Foci");
+        buttonFoci.setOnAction(e->{
+            fociAdder();
+        });
 
         //Setting GUI Layout
 
         HBox buttonLayout = new HBox(20);
         buttonLayout.setBackground(Background.fill(Color.BLACK));
         buttonLayout.setAlignment(Pos.CENTER);
-        buttonLayout.getChildren().addAll(buttonNPC,buttonUpload,buttonViewPC);
+        buttonLayout.getChildren().addAll(buttonNPC,buttonFoci,buttonUpload,buttonViewPC);
         ImageView mainImage = new ImageView();
         TilePane imagePane;
         try {
@@ -112,6 +116,119 @@ public class BackStage {
         Scene openingScene = new Scene(layout,WINDOWWIDTH,WINDOWHIGHT);
         window.setScene(openingScene);
         window.show();
+    }
+    private void fociAdder(){
+        System.out.println("creating new Focus");
+
+        BorderPane mainPain = new BorderPane();
+
+        Button aReturn = new Button("Return");
+        aReturn.setOnAction(e->mainMenu());
+        Button build = new Button("Create focus");
+
+        TextField titleField = new TextField("Focus Title");
+
+        TextField tier1Name = new TextField("Tier 1 Ability");
+        TextField tier2Name = new TextField("Tier 2 Ability");
+        TextField tier3Name = new TextField("Tier 3 Ability");
+        TextField tier4Name = new TextField("Tier 4 Ability");
+        TextField tier5Name = new TextField("Tier 5 Ability");
+        TextField tier6Name = new TextField("Tier 6 Ability");
+
+        TextField tier1Type = new TextField("Type");
+        TextField tier2Type = new TextField("Type");
+        TextField tier3Type = new TextField("Type");
+        TextField tier4Type = new TextField("Type");
+        TextField tier5Type = new TextField("Type");
+        TextField tier6Type = new TextField("Type");
+
+        TextField tier1Cost = new TextField("Cost");
+        TextField tier2Cost = new TextField("Cost");
+        TextField tier3Cost = new TextField("Cost");
+        TextField tier4Cost = new TextField("Cost");
+        TextField tier5Cost = new TextField("Cost");
+        TextField tier6Cost = new TextField("Cost");
+
+        TextArea tier1Description = new TextArea("Description");
+        TextArea tier2Description = new TextArea("Description");
+        TextArea tier3Description = new TextArea("Description");
+        TextArea tier4Description = new TextArea("Description");
+        TextArea tier5Description = new TextArea("Description");
+        TextArea tier6Description = new TextArea("Description");
+
+        HBox tier1Ability = new HBox(tier1Name,tier1Type,tier1Cost,tier1Description);
+        HBox tier2Ability = new HBox(tier2Name,tier2Type,tier2Cost,tier2Description);
+        HBox tier3Ability = new HBox(tier3Name,tier3Type,tier3Cost,tier3Description);
+        HBox tier4Ability = new HBox(tier4Name,tier4Type,tier4Cost,tier4Description);
+        HBox tier5Ability = new HBox(tier5Name,tier5Type,tier5Cost,tier5Description);
+        HBox tier6Ability = new HBox(tier6Name,tier6Type,tier6Cost,tier6Description);
+
+
+        EventHandler<ActionEvent> buildfoci = new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+                Abilities ability1[] = new Abilities[]{new Abilities(
+                        tier1Name.getText(),
+                        tier1Type.getText(),
+                        Integer.parseInt(tier1Cost.getText()),
+                        tier1Description.getText()
+                )};
+                Abilities ability2[] = new Abilities[]{new Abilities(
+                        tier2Name.getText(),
+                        tier2Type.getText(),
+                        Integer.parseInt(tier2Cost.getText()),
+                        tier2Description.getText()
+                )};
+                Abilities ability3[] = new Abilities[]{new Abilities(
+                        tier3Name.getText(),
+                        tier3Type.getText(),
+                        Integer.parseInt(tier3Cost.getText()),
+                        tier3Description.getText()
+                )};
+                Abilities ability4[] = new Abilities[]{new Abilities(
+                        tier4Name.getText(),
+                        tier4Type.getText(),
+                        Integer.parseInt(tier4Cost.getText()),
+                        tier4Description.getText()
+                )};
+                Abilities ability5[] = new Abilities[]{new Abilities(
+                        tier5Name.getText(),
+                        tier5Type.getText(),
+                        Integer.parseInt(tier5Cost.getText()),
+                        tier5Description.getText()
+                )};
+                Abilities[] ability6 = new Abilities[]{new Abilities(
+                        tier6Name.getText(),
+                        tier6Type.getText(),
+                        Integer.parseInt(tier6Cost.getText()),
+                        tier6Description.getText()
+                )};
+
+
+                Focus tmpF = new Focus(titleField.getText(),
+                        ability1,ability2,ability3,ability4,ability5,ability6);
+
+                JsonSave fJson = new JsonSave();
+                try {
+                    fJson.save(tmpF,"foci/"+titleField.getText());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                fociAdder();
+            }
+        };
+
+
+        build.setOnAction(buildfoci);
+
+
+        mainPain.setCenter(new VBox(10,titleField,tier1Ability,
+                tier2Ability,tier3Ability,
+                tier4Ability,tier5Ability,tier6Ability));
+
+        mainPain.setBottom(new VBox(10,build,aReturn));
+        window.setScene(new Scene(mainPain,WINDOWWIDTH,WINDOWHIGHT));
+        window.show();
+
     }
     private void buildNPC() throws IOException {
 
