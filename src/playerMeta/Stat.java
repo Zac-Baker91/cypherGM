@@ -6,6 +6,7 @@ public class Stat {
     private int currentPool;
     private int edge;
     private int maxPool;
+
     public Stat(){
         currentPool = -1;
         maxPool = -1;
@@ -53,4 +54,6 @@ public class Stat {
         this.edge = this.edge + mod;
     }
 }
+
+
 

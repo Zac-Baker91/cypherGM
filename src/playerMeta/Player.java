@@ -35,38 +35,26 @@ public class Player {
         return skillArray;
     }
 
-    public Player(String name, String descriptor, String type, String focus) {
+    public Player(String name, Descriptor descriptor, String type, Focus focus) {
         this.name = name;
         this.effort = 1;
         this.tier = 1;
         this.xp = 0;
 
-        this.description = name + " is a " + descriptor + " " + type + " who " + focus + "!";
+        this.description = name + " is a " + descriptor + " " + type + " who is " + focus + "!";
         this.type = new Type(type);
-        Descriptor descriptor1 = Descriptor.keyNameof(descriptor);
+
         //for the simple builder these values are hard coded later it will need user input
-        this.focus = new Focus("name",
-                new Abilities[]{new Abilities("Blue Steal","intellect",1,
-                        "Lock eyes with someone and overwhelm them with your Machismo")},
-                new Abilities[]{new Abilities("Force Entry","might",1,
-                        "can force your way through enter ways")},
-                new Abilities[]{new Abilities("test","test",0,"test")},
-                new Abilities[]{new Abilities("test","test",0,"test")},
-                new Abilities[]{new Abilities("test","test",0,"test")},
-                new Abilities[]{new Abilities("test","test",0,"test")}
-        );
+        this.focus = focus;
+        this.type.getIntellect().modMaxPool(descriptor.intellectMod);
+        this.type.getMight().modMaxPool(descriptor.mightMod);
+        this.type.getSpeed().modMaxPool(descriptor.speedMod);
 
 
-        assert descriptor1 != null;
-        this.type.getIntellect().modMaxPool(descriptor1.intellectMod);
-        this.type.getMight().modMaxPool(descriptor1.mightMod);
-        this.type.getSpeed().modMaxPool(descriptor1.speedMod);
-
-
-        Abilities[] tmpA = abilityCat(this.type.getAbilitiesArray(), descriptor1.abilityArray);
+        Abilities[] tmpA = abilityCat(this.type.getAbilitiesArray(), descriptor.abilityArray);
         abilityCat(this.focus.tierOne(),tmpA);
 
-        skillCat(this.type.getSkillArray(), descriptor1.skillsArray);
+        skillCat(this.type.getSkillArray(), descriptor.skillsArray);
 
 
     }

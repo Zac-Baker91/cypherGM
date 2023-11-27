@@ -4,4 +4,9 @@ package playerMeta;
  * These Foci are highly unique to the game and the players, They should are constructed using user input.
  **/
 public record Focus(String name,Abilities[] tierOne,Abilities[] tierTwo,Abilities[] tierThree,
-                    Abilities[] tierFour,Abilities[] tierFive,Abilities[] tierSix) {}
+                    Abilities[] tierFour,Abilities[] tierFive,Abilities[] tierSix) {
+    @Override
+    public String toString(){
+        return this.name();
+    }
+}

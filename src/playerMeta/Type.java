@@ -12,6 +12,8 @@ public class Type {
     //This is not a game for loot goblins. element 0 should be reserve for player clothing(even if they are nude)
     private Item[] playersBag = new Item[20];
     private int maxCypher;
+
+
     public Type(String name) {
 
         this.key = name.toLowerCase();
