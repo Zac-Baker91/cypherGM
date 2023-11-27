@@ -1,7 +1,5 @@
 import JsonOI.JsonLoad;
 import JsonOI.JsonSave;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -51,22 +49,17 @@ public class BackStage {
     public void raiseCurtain(){
         mainMenu();
     }
-    private void lowerCurtain(){
-        //todo methode to be used when properly quiting app
-    }
+
     private void mainMenu(){
         Button buttonNPC;
         Button buttonUpload;
         Button buttonViewPC;
         Button buttonFoci;
 
-
-
-        
         buttonNPC = new Button("Build Player");
         buttonNPC.setOnAction(e-> {
             try {
-                buildNPC();
+                buildPC();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
@@ -83,9 +76,7 @@ public class BackStage {
         });
         //Foci builder
         buttonFoci = new Button("Build Foci");
-        buttonFoci.setOnAction(e->{
-            fociAdder();
-        });
+        buttonFoci.setOnAction(e-> fociAdder());
 
         //Setting GUI Layout
 
@@ -164,33 +155,33 @@ public class BackStage {
         HBox tier6Ability = new HBox(tier6Name,tier6Type,tier6Cost,tier6Description);
 
 
-        EventHandler<ActionEvent> buildfoci = new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-                Abilities ability1[] = new Abilities[]{new Abilities(
+        build.setOnAction(e->{
+
+                Abilities[] ability1 = new Abilities[]{new Abilities(
                         tier1Name.getText(),
                         tier1Type.getText(),
                         Integer.parseInt(tier1Cost.getText()),
                         tier1Description.getText()
                 )};
-                Abilities ability2[] = new Abilities[]{new Abilities(
+                Abilities[] ability2 = new Abilities[]{new Abilities(
                         tier2Name.getText(),
                         tier2Type.getText(),
                         Integer.parseInt(tier2Cost.getText()),
                         tier2Description.getText()
                 )};
-                Abilities ability3[] = new Abilities[]{new Abilities(
+                Abilities[] ability3 = new Abilities[]{new Abilities(
                         tier3Name.getText(),
                         tier3Type.getText(),
                         Integer.parseInt(tier3Cost.getText()),
                         tier3Description.getText()
                 )};
-                Abilities ability4[] = new Abilities[]{new Abilities(
+                Abilities[] ability4 = new Abilities[]{new Abilities(
                         tier4Name.getText(),
                         tier4Type.getText(),
                         Integer.parseInt(tier4Cost.getText()),
                         tier4Description.getText()
                 )};
-                Abilities ability5[] = new Abilities[]{new Abilities(
+                Abilities[] ability5 = new Abilities[]{new Abilities(
                         tier5Name.getText(),
                         tier5Type.getText(),
                         Integer.parseInt(tier5Cost.getText()),
@@ -214,11 +205,7 @@ public class BackStage {
                     throw new RuntimeException(ex);
                 }
                 fociAdder();
-            }
-        };
-
-
-        build.setOnAction(buildfoci);
+        });
 
 
         mainPain.setCenter(new VBox(10,titleField,tier1Ability,
@@ -230,7 +217,7 @@ public class BackStage {
         window.show();
 
     }
-    private void buildNPC() throws IOException {
+    private void buildPC() throws IOException {
 
         System.out.println("Loading foci options...");
         JsonSave jsonSave = new JsonSave();
@@ -238,17 +225,8 @@ public class BackStage {
 
         //building local data structures
         Focus[] foci = buildFoci();
-        String[] focusOption = new String[foci.length];
-        int i = 0;
-        for (Focus f:foci) {
-            System.out.println(f.name());
-            focusOption[i] = f.name();
-            i++;
-        }
-
-
         //building Gui elements
-        Label title = new Label("Who are you?: <Name> is a <Descriptor> <Type> who <Focus>");
+        Label title = new Label("Who are you?: <Name> is a <Descriptor> <Type> who is <Focus>");
         VBox titlePane = new VBox();
         titlePane.getChildren().add(title);
 
@@ -259,44 +237,39 @@ public class BackStage {
         TextField nameField = new TextField("Name");
         ChoiceBox<Descriptor> descriptionBox = new ChoiceBox<>();
         ChoiceBox<String> typeBox = new ChoiceBox<>();
-        ChoiceBox<String> focusBox = new ChoiceBox<>();
+        ChoiceBox<Focus> focusBox = new ChoiceBox<>();
         descriptionBox.getItems().setAll(Descriptor.values());
         typeBox.getItems().setAll("Warrior","Adept","Explorer","Speaker");
-        focusBox.getItems().setAll(focusOption);
+        focusBox.getItems().setAll(foci);
 
 
-
-        //This event handles creating and saving player based on name input and choice box selection.
-        EventHandler<ActionEvent> buildEvent = new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e)
-            {
-
-                String playerName = nameField.getText();
-                Descriptor playerDescriptor = descriptionBox.getSelectionModel().getSelectedItem();
-                String playerType = typeBox.getSelectionModel().getSelectedItem();
-                String playerFocus = focusBox.getSelectionModel().getSelectedItem();
-
-                Player n00b = new Player(playerName, playerDescriptor.keyName, playerType, playerFocus);
-                System.out.println("Build Character: "+n00b.getDescription());
-
-                BorderPane displayChar = playerStatPane(n00b);
-
-                scroll.setContent(displayChar);
-                boarderP.setCenter(scroll);
-                //add new player to class var Player and saves player to json
-                players[playerCount] = n00b;
-                playerCount++;
-                try {
-                    jsonSave.save(n00b.getFocus(), n00b.getName());
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-
-            }
-        };
         //Bottom bar buttons
         Button buildPlayer = new Button("Build Player");
-        buildPlayer.setOnAction(buildEvent);
+
+        buildPlayer.setOnAction(e->{
+            String playerName = nameField.getText();
+            Descriptor playerDescriptor = descriptionBox.getSelectionModel().getSelectedItem();
+            String playerType = typeBox.getSelectionModel().getSelectedItem();
+            Focus playerFocus = focusBox.getSelectionModel().getSelectedItem();
+
+            Player n00b = new Player(playerName, playerDescriptor, playerType, playerFocus);
+            System.out.println("Build Character: "+n00b.getDescription());
+
+            BorderPane displayChar = playerStatPane(n00b);
+
+            scroll.setContent(displayChar);
+            boarderP.setCenter(scroll);
+            //add new player to class var Player and saves player to json
+            players[playerCount] = n00b;
+            playerCount++;
+            try {
+                jsonSave.save(n00b.getFocus(), n00b.getName());
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+
         Button backB = new Button("Return");
         backB.setOnAction(e -> mainMenu());
 
