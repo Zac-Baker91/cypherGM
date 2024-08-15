@@ -1,0 +1,53 @@
+{
+  "name": "Manifests Unpredictable Abilities",
+  "description": "Exposure to various anomalies has left you with fluctuating, unpredictable powers.",
+  "connectionOptions": [
+    "One PC witnessed one of your anomalous manifestations.",
+    "You unknowingly affected one PC with your abilities in the past.",
+    "One PC is studying your condition, hoping to understand it.",
+    "You share a strange, possibly anomalous connection with one PC."
+  ],
+  "additionalEquipment": [
+    "Anomaly suppression bracelet",
+    "Medical log of manifestations",
+    "Emergency stabilization kit",
+    "Prototype anomalous energy detector"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Unpredictable Talent",
+      "description": "Once per day, gain training in a random skill for one hour."
+    },
+    {
+      "tier": 1,
+      "name": "Anomalous Resistance",
+      "description": "You have +2 to Intellect defense rolls against anomalous mental effects."
+    },
+    {
+      "tier": 2,
+      "name": "Energy Surge",
+      "description": "Once per day, you can release a surge of anomalous energy, affecting a random target within short range."
+    },
+    {
+      "tier": 3,
+      "name": "Probability Flux",
+      "description": "You can spend 3 Intellect points to reroll any roll, but the GM decides if it's the higher or lower result."
+    },
+    {
+      "tier": 4,
+      "name": "Dimensional Shift",
+      "description": "Once per day, you can attempt to briefly shift to a random dimension. This is a difficult Intellect task."
+    },
+    {
+      "tier": 5,
+      "name": "Anomalous Manifestation",
+      "description": "You can attempt to manifest a random anomalous ability. Roll on a table provided by the GM to determine the effect."
+    },
+    {
+      "tier": 6,
+      "name": "Reality Breach",
+      "description": "Once per session, you can open a temporary breach to another reality. The effects are unpredictable and determined by the GM."
+    }
+  ]
+}
