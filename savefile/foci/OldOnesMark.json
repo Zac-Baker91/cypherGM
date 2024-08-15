@@ -1,0 +1,53 @@
+{
+  "name": "Bears the Mark of the Old Ones",
+  "description": "You were once part of a cult dedicated to ancient cosmic entities. Though you've left that life behind, the eldritch influence still clings to you.",
+  "connectionOptions": [
+    "One PC helped you escape from the cult.",
+    "You sense that one PC has a destiny intertwined with cosmic forces.",
+    "One PC is investigating your former cult, unaware of your past involvement.",
+    "You're protecting one PC from the cult's interest in them."
+  ],
+  "additionalEquipment": [
+    "Concealed cultist tattoos",
+    "Eldritch symbol amulet (which you can't bring yourself to discard)",
+    "Vials of strange, oily liquid",
+    "Dream journal filled with prophetic nightmares"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Eldritch Resistance",
+      "description": "Your exposure to cosmic forces has changed you. You have +2 Armor against damage from otherworldly sources."
+    },
+    {
+      "tier": 1,
+      "name": "Dark Whispers",
+      "description": "You can communicate telepathically with willing creatures within short range."
+    },
+    {
+      "tier": 2,
+      "name": "Unsettling Presence",
+      "description": "Your aura unsettles normal people. You're trained in intimidation tasks against non-cultists."
+    },
+    {
+      "tier": 3,
+      "name": "Cosmic Insight",
+      "description": "Once per day, you can tap into cosmic knowledge to gain an asset on a non-combat task of your choice."
+    },
+    {
+      "tier": 4,
+      "name": "Eldritch Transformation",
+      "description": "You can temporarily transform part of your body in disturbing ways (e.g., growing tentacles, extra eyes). This provides an asset to a physical task but risks Intellect damage."
+    },
+    {
+      "tier": 5,
+      "name": "Void Walk",
+      "description": "Once per day, you can step into one shadow and emerge from another within long range."
+    },
+    {
+      "tier": 6,
+      "name": "Call of the Old Ones",
+      "description": "Once per session, you can attempt to call upon the power of cosmic entities. This can produce powerful effects but comes with great risk and potential madness."
+    }
+  ]
+}
