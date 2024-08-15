@@ -1,0 +1,53 @@
+{
+  "name": "Escapes Containment",
+  "description": "You've developed an uncanny ability to escape from various forms of containment and dangerous situations.",
+  "connectionOptions": [
+    "You helped one PC escape from a containment zone.",
+    "One PC is tracking you, believing you might be anomalous.",
+    "You have information about an anomaly that one PC is investigating.",
+    "One PC's relative was a guard you outwitted during an escape."
+  ],
+  "additionalEquipment": [
+    "Makeshift lockpicking tools",
+    "Contraband map of facility layouts",
+    "Repurposed tracking device",
+    "Scavenged emergency supplies"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Improvisational Escape",
+      "description": "You're trained in escaping from physical restraints and locked rooms."
+    },
+    {
+      "tier": 1,
+      "name": "Scavenger",
+      "description": "You can fashion a simple tool from available materials as an action once per day."
+    },
+    {
+      "tier": 2,
+      "name": "Evasion Tactics",
+      "description": "You're trained in stealth and escaping pursuit."
+    },
+    {
+      "tier": 3,
+      "name": "Anomaly Exploitation",
+      "description": "You can attempt to use nearby anomalous effects to aid your escape. This is usually a difficult Intellect task."
+    },
+    {
+      "tier": 4,
+      "name": "Master of Disguise",
+      "description": "You can create a convincing disguise in minutes, trained in deception while disguised."
+    },
+    {
+      "tier": 5,
+      "name": "Reality Slip",
+      "description": "Once per day, you can attempt to briefly phase through a solid barrier. This is an Intellect task."
+    },
+    {
+      "tier": 6,
+      "name": "Great Escape",
+      "description": "Once per session, you can automatically succeed on any single task related to escaping or evading capture."
+    }
+  ]
+}
