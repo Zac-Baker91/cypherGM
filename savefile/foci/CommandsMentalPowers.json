@@ -1,0 +1,49 @@
+{
+      "name": "Commands Mental Powers",
+      "description": "You possess potent psychic abilities, allowing you to manipulate minds and matter.",
+      "connectionOptions": [
+        "One PC is immune to your mental powers.",
+        "You once accidentally read one PC's mind, learning a secret.",
+        "One PC helped you learn to control your abilities."
+      ],
+      "additionalEquipment": [
+        "A headband or other object you use to focus your powers"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Telepathic",
+          "description": "You can speak telepathically with any creature you can see within short range."
+        },
+        {
+          "tier": 1,
+          "name": "Mind Reading",
+          "description": "You can read the surface thoughts of a creature within short range."
+        },
+        {
+          "tier": 2,
+          "name": "Psychic Suggestion",
+          "description": "You can attempt to implant a psychic suggestion in the mind of a creature within short range."
+        },
+        {
+          "tier": 3,
+          "name": "Mind Control",
+          "description": "You can attempt to control the actions of a creature within short range for one round."
+        },
+        {
+          "tier": 4,
+          "name": "Telekinesis",
+          "description": "You can move objects weighing up to 200 pounds with your mind."
+        },
+        {
+          "tier": 5,
+          "name": "Psychic Attack",
+          "description": "You can launch a mental assault on a creature within long range, inflicting 5 points of Intellect damage."
+        },
+        {
+          "tier": 6,
+          "name": "Mind Palace",
+          "description": "You can create a psychic construct that can hold up to three minds, allowing instant communication and shared perceptions."
+        }
+      ]
+    }
