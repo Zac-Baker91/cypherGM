@@ -1,0 +1,53 @@
+{
+  "name": "Balances Power and Principles",
+  "description": "You navigate the complex ethical landscape of the Foundation, striving to maintain humanitarian principles in the face of existential threats.",
+  "connectionOptions": [
+    "You once ruled in favor of sparing one PC's life despite protocol dictating otherwise.",
+    "One PC is aware of an ethically questionable decision you made and is conflicted about it.",
+    "You're investigating an ethical complaint related to one PC's recent mission.",
+    "One PC reminds you of someone you failed to save, driving you to protect them."
+  ],
+  "additionalEquipment": [
+    "Ethics committee override key",
+    "Morality quantum computer",
+    "Memetic loyalty tester",
+    "Ethical dilemma simulation device"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Ethical Insight",
+      "description": "You're trained in all tasks related to ethical decision-making and recognizing moral implications of actions."
+    },
+    {
+      "tier": 1,
+      "name": "Diplomatic Immunity",
+      "description": "You have limited protection from standard Foundation protocols, allowing you to question orders without immediate repercussions."
+    },
+    {
+      "tier": 2,
+      "name": "Moral Compass",
+      "description": "You can spend 2 Intellect points to gain an asset on any task related to resisting mental influence or maintaining your ethical standards."
+    },
+    {
+      "tier": 3,
+      "name": "Ethical Override",
+      "description": "Once per day, you can override a Foundation protocol on ethical grounds. This may have unforeseen consequences."
+    },
+    {
+      "tier": 4,
+      "name": "Memetic Resistance",
+      "description": "You've developed resistance to memetic and mind-altering effects. You have +2 Armor against mental attacks or influence."
+    },
+    {
+      "tier": 5,
+      "name": "Moral Arbitration",
+      "description": "You can attempt to resolve complex ethical dilemmas, potentially averting conflicts or finding compromise solutions to seemingly impossible situations."
+    },
+    {
+      "tier": 6,
+      "name": "Ethics Restructuring",
+      "description": "Once per session, you can attempt to fundamentally alter the ethical framework of an individual or small group. This is an incredibly difficult and potentially dangerous ability."
+    }
+  ]
+}
