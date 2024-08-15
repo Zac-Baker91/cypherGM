@@ -1,0 +1,53 @@
+{
+  "name": "Defies Death's Embrace",
+  "description": "You are cursed with immortality, having lived through centuries and accumulated both knowledge and regrets.",
+  "connectionOptions": [
+    "One PC reminds you of a lost love from centuries past.",
+    "You once knew one PC's ancestor and see the family resemblance.",
+    "One PC is researching historical events you personally witnessed.",
+    "You believe one PC might hold the key to ending your immortality."
+  ],
+  "additionalEquipment": [
+    "Antique pocket watch that never stops",
+    "Journal documenting centuries of experiences",
+    "Ornate dagger with occult symbols",
+    "Vial of your own blood (which has unusual properties)"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Undying",
+      "description": "You cannot die from old age or disease. When you would die from damage, you instead fall unconscious and awaken fully healed after 1d6 hours."
+    },
+    {
+      "tier": 1,
+      "name": "Historical Insight",
+      "description": "You're trained in history and can provide firsthand accounts of past events."
+    },
+    {
+      "tier": 2,
+      "name": "Blood Magic",
+      "description": "You can use your blood to perform minor magical effects, such as healing minor wounds or creating small illusions."
+    },
+    {
+      "tier": 3,
+      "name": "Centuries of Experience",
+      "description": "Once per day, you can draw upon your vast experience to become trained in a skill of your choice for one hour."
+    },
+    {
+      "tier": 4,
+      "name": "Drain Life",
+      "description": "You can drain life force from a willing or helpless creature, healing yourself but potentially harming them."
+    },
+    {
+      "tier": 5,
+      "name": "Phantom Form",
+      "description": "You can temporarily transform into a mist-like form, becoming intangible and able to pass through solid objects."
+    },
+    {
+      "tier": 6,
+      "name": "Defy Fate",
+      "description": "Once per session, you can completely negate a single attack or harmful effect targeting you or an ally within short range."
+    }
+  ]
+}
