@@ -1,0 +1,53 @@
+{
+  "name": "Channels the Spirit World",
+  "description": "You possess the ability to communicate with the dead and channel spirits, but this gift comes with a terrible price.",
+  "connectionOptions": [
+    "One PC lost a loved one and seeks your help to communicate with them.",
+    "You've sensed a malevolent spirit attached to one PC.",
+    "One PC witnessed one of your séances go horribly wrong.",
+    "You believe one PC has latent medium abilities and want to mentor them."
+  ],
+  "additionalEquipment": [
+    "Ornate tarot deck",
+    "Crystal ball",
+    "Spirit board",
+    "Vial of laudanum for calming nerves"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Spirit Sight",
+      "description": "You can see and communicate with spirits invisible to others. You're trained in tasks involving ghostly perception and interaction."
+    },
+    {
+      "tier": 1,
+      "name": "Séance Mastery",
+      "description": "You're trained in conducting séances and can attempt to contact specific spirits."
+    },
+    {
+      "tier": 2,
+      "name": "Spectral Shield",
+      "description": "You can create a barrier against malevolent spirits. You and nearby allies gain +2 Armor against attacks from incorporeal entities."
+    },
+    {
+      "tier": 3,
+      "name": "Channel the Dead",
+      "description": "You can allow a spirit to temporarily possess you to gain information or skills. This is risky and may have unforeseen consequences."
+    },
+    {
+      "tier": 4,
+      "name": "Exorcism",
+      "description": "You can attempt to banish a possessing spirit or exorcise a haunted location. This is a difficult Intellect task."
+    },
+    {
+      "tier": 5,
+      "name": "Ghostly Manifestation",
+      "description": "You can temporarily manifest a spirit in a visible, audible form. This spirit can interact with the physical world in limited ways."
+    },
+    {
+      "tier": 6,
+      "name": "Bridge Between Worlds",
+      "description": "Once per session, you can open a temporary portal to the spirit world. This is extremely dangerous and unpredictable."
+    }
+  ]
+}
