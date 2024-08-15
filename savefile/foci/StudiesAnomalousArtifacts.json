@@ -1,0 +1,53 @@
+{
+  "name": "Studies Anomalous Artifacts",
+  "description": "You are a specialist in analyzing and understanding the properties of anomalous artifacts.",
+  "connectionOptions": [
+    "One PC often comes to you for advice on strange objects they encounter.",
+    "You're writing a thesis on an artifact connected to one PC's background.",
+    "One PC is skeptical of your theories about artifacts.",
+    "You've been tracking an artifact that one PC's family heirloom might be related to."
+  ],
+  "additionalEquipment": [
+    "Advanced sensor array",
+    "Portable containment unit",
+    "Artifact analysis toolkit",
+    "Encrypted research database"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Anomalous Insight",
+      "description": "You are trained in identifying and analyzing anomalous artifacts. You can spend one Intellect point to get a general sense of an artifact's function or origin."
+    },
+    {
+      "tier": 1,
+      "name": "Safe Handling Protocols",
+      "description": "You are trained in tasks related to safely containing and transporting anomalous objects."
+    },
+    {
+      "tier": 2,
+      "name": "Theoretical Application",
+      "description": "You can spend an action theorizing about an artifact's potential uses. This gives you or an ally an asset on the next roll to use the artifact."
+    },
+    {
+      "tier": 3,
+      "name": "Artifact Categorization",
+      "description": "You can accurately categorize an artifact's threat level and containment requirements after studying it for one minute."
+    },
+    {
+      "tier": 4,
+      "name": "Reverse Engineering",
+      "description": "You can attempt to replicate a simple function of an artifact using conventional technology. This requires a day of work and appropriate materials."
+    },
+    {
+      "tier": 5,
+      "name": "Anomalous Breakthrough",
+      "description": "Once per day, you can have a sudden insight about an artifact, potentially revealing hidden functions or dangers."
+    },
+    {
+      "tier": 6,
+      "name": "Artifact Mastery",
+      "description": "You can attempt to fully understand and control an artifact's functions. This requires an hour of study and a difficult Intellect roll."
+    }
+  ]
+}
