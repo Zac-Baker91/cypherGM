@@ -1,0 +1,51 @@
+{
+      "name": "Explores Dark Places",
+      "description": "You are an expert at navigating dangerous and unknown territories.",
+      "connectionOptions": [
+        "One PC once got lost with you in a dangerous place.",
+        "You found a valuable item in a ruin and gave it to one PC.",
+        "You once rescued one PC from a trap or dangerous situation."
+      ],
+      "additionalEquipment": [
+        "Rope",
+        "Pitons",
+        "Flashlight or lantern"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Dark Esoteries",
+          "description": "You are trained in tasks related to navigating and surviving in dark or underground places."
+        },
+        {
+          "tier": 1,
+          "name": "Danger Sense",
+          "description": "You have an intuitive ability to sense danger, giving you an asset on any task to detect traps or ambushes."
+        },
+        {
+          "tier": 2,
+          "name": "Eyes Adjusted",
+          "description": "You can see in extremely dim light as though it were bright light."
+        },
+        {
+          "tier": 3,
+          "name": "Deep Explorer",
+          "description": "You are trained in climbing, swimming, and escaping from bonds or tight spaces."
+        },
+        {
+          "tier": 4,
+          "name": "Dark Explorer",
+          "description": "When in dark or underground places, you have an asset on all tasks involving sneaking, perception, or initiative."
+        },
+        {
+          "tier": 5,
+          "name": "Blending In",
+          "description": "When in darkness or shadow, you can attempt to hide even if you don't have cover."
+        },
+        {
+          "tier": 6,
+          "name": "Shadow Walk",
+          "description": "You can step into a shadow and emerge from any other shadow within long range, effectively teleporting."
+        }
+      ]
+    }
