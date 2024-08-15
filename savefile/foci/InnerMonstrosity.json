@@ -1,0 +1,53 @@
+{
+  "name": "Struggles with Inner Monstrosity",
+  "description": "You harbor a monstrous alter ego, struggling to control the beast within while utilizing its power.",
+  "connectionOptions": [
+    "One PC has seen your monstrous form and kept your secret.",
+    "You're seeking a cure, and one PC might have leads.",
+    "One PC reminds you of someone from your past, before your transformation.",
+    "You fear you might have harmed one PC's loved one during a loss of control."
+  ],
+  "additionalEquipment": [
+    "Restraints for your monstrous form",
+    "Elixir to suppress transformations (limited supply)",
+    "Torn and mended clothing",
+    "Locket with a picture of your former self"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Monstrous Strength",
+      "description": "When you embrace your inner beast, you gain +2 to your Might Edge for 10 minutes, but risk losing control."
+    },
+    {
+      "tier": 1,
+      "name": "Heightened Senses",
+      "description": "You're trained in perception tasks, particularly those involving smell or hearing."
+    },
+    {
+      "tier": 2,
+      "name": "Rapid Healing",
+      "description": "You heal at an accelerated rate, recovering 1 additional point per hour to your Might Pool."
+    },
+    {
+      "tier": 3,
+      "name": "Partial Transformation",
+      "description": "You can partially transform specific body parts (e.g., claws, enhanced muscles) without full transformation."
+    },
+    {
+      "tier": 4,
+      "name": "Primal Rage",
+      "description": "When seriously injured, you can enter a berserk state, gaining +1 Armor and dealing +3 damage in combat, but attacking friend and foe alike."
+    },
+    {
+      "tier": 5,
+      "name": "Beast Mastery",
+      "description": "You gain limited control over your monstrous form, retaining your mind during transformation and gaining its full benefits without drawbacks once per day."
+    },
+    {
+      "tier": 6,
+      "name": "Monstrous Apotheosis",
+      "description": "Once per session, you can fully embrace your monstrous nature, gaining immense power but risking permanent transformation. Work with the GM to determine specific effects."
+    }
+  ]
+}
