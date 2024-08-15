@@ -1,0 +1,53 @@
+{
+  "name": "Delves into Forbidden Knowledge",
+  "description": "You've studied ancient and terrible secrets that man was not meant to know, gaining both power and peril from your eldritch understanding.",
+  "connectionOptions": [
+    "One PC helped you acquire a dangerous tome you've been seeking.",
+    "You're investigating an ancestral curse that affects one PC's family.",
+    "One PC witnessed you performing a ritual and is both fascinated and terrified.",
+    "You sense that one PC has been touched by forces beyond mortal comprehension."
+  ],
+  "additionalEquipment": [
+    "Eldritch tome (possibly bound in human skin)",
+    "Silver pentacle amulet",
+    "Vial of protective salt",
+    "Journal filled with cryptic notes and diagrams"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Eldritch Insight",
+      "description": "You're trained in tasks related to occult knowledge, ancient languages, and recognizing otherworldly phenomena."
+    },
+    {
+      "tier": 1,
+      "name": "Mind Shield",
+      "description": "Your exposure to cosmic horrors has hardened your mind. You have +2 Armor against mental attacks and Intellect damage."
+    },
+    {
+      "tier": 2,
+      "name": "Ritual Casting",
+      "description": "You can perform minor eldritch rituals. The effects are usually subtle but can provide valuable information or temporary protection from supernatural forces."
+    },
+    {
+      "tier": 3,
+      "name": "Glimpse Beyond",
+      "description": "Once per day, you can attempt to perceive hidden truths or unseen entities. This is an Intellect task that risks temporary Intellect damage on failure."
+    },
+    {
+      "tier": 4,
+      "name": "Whispers from Beyond",
+      "description": "You can attempt to communicate with extradimensional entities for information. This is extremely dangerous and may attract unwanted attention."
+    },
+    {
+      "tier": 5,
+      "name": "Reality Distortion",
+      "description": "You can warp local reality in minor ways, such as causing unsettling visual or auditory phenomena. This can provide an asset to intimidation or deception tasks."
+    },
+    {
+      "tier": 6,
+      "name": "Gate of Yog-Sothoth",
+      "description": "Once per session, you can attempt to open a temporary portal to another dimension or summon an otherworldly entity. This is incredibly risky and may have severe consequences."
+    }
+  ]
+}
