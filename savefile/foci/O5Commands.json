@@ -1,0 +1,53 @@
+{
+  "name": "Commands Anomalous Assets",
+  "description": "You have the authority and knowledge to deploy and control a variety of anomalous assets for Foundation operations.",
+  "connectionOptions": [
+    "One PC was extracted from a dangerous situation by an anomalous asset you deployed.",
+    "You're considering recruiting one PC for anomalous operations training.",
+    "One PC has witnessed the aftermath of one of your anomalous operations gone wrong.",
+    "You're investigating a potential leak of anomalous tech, and one PC is a person of interest."
+  ],
+  "additionalEquipment": [
+    "Anomalous asset control terminal",
+    "Reality stabilization field generator",
+    "Quantum entangled communication device",
+    "Prototype anomalous energy weapon"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Asset Deployment",
+      "description": "You can call in a minor anomalous asset to assist once per day. The nature of the asset is determined by the GM based on the situation."
+    },
+    {
+      "tier": 1,
+      "name": "Anomalous Tactics",
+      "description": "You're trained in all tasks related to strategic use of anomalous assets and understanding their capabilities."
+    },
+    {
+      "tier": 2,
+      "name": "Reality Bubble",
+      "description": "You can create a small area of stabilized reality, protecting against minor reality fluctuations for 10 minutes."
+    },
+    {
+      "tier": 3,
+      "name": "Containment Breach Authorization",
+      "description": "Once per day, you can authorize the controlled release of a contained anomaly to assist in an operation. This is highly risky and may have severe consequences."
+    },
+    {
+      "tier": 4,
+      "name": "Anomalous Synergy",
+      "description": "You can attempt to combine the effects of two anomalous assets or phenomena. This is a difficult Intellect task and may have unpredictable results."
+    },
+    {
+      "tier": 5,
+      "name": "Reality Restructuring",
+      "description": "You can attempt to temporarily alter local reality using a combination of anomalous assets. This is extremely difficult and potentially dangerous."
+    },
+    {
+      "tier": 6,
+      "name": "Omega-Level Asset Deployment",
+      "description": "Once per session, you can deploy an Omega-level anomalous asset. This is incredibly powerful but comes with severe risks and consequences."
+    }
+  ]
+}
