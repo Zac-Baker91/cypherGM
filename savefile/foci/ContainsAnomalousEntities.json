@@ -1,0 +1,50 @@
+{
+      "name": "Contains Anomalous Entities",
+      "description": "You are an expert in containing and controlling anomalous entities and phenomena.",
+      "connectionOptions": [
+        "One PC was once affected by an anomaly you contained.",
+        "You and one PC worked together to contain a particularly dangerous entity.",
+        "One PC is skeptical of your containment methods."
+      ],
+      "additionalEquipment": [
+        "Specialized containment briefcase",
+        "Reality anchor device (prototype)"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Anomaly Assessment",
+          "description": "You are trained in identifying and assessing anomalous entities and phenomena."
+        },
+        {
+          "tier": 1,
+          "name": "Containment Protocol",
+          "description": "You can create a basic containment field that can hold a small anomalous entity for up to 1 hour."
+        },
+        {
+          "tier": 2,
+          "name": "Reality Stabilization",
+          "description": "You can stabilize local reality, providing an asset to all nearby allies for resisting reality-altering effects for 10 minutes."
+        },
+        {
+          "tier": 3,
+          "name": "Adaptive Containment",
+          "description": "Your containment fields can now adapt to the specific properties of the anomaly, lasting up to 24 hours."
+        },
+        {
+          "tier": 4,
+          "name": "Nullification Field",
+          "description": "You can create a field that nullifies minor anomalous effects within short range for 1 minute."
+        },
+        {
+          "tier": 5,
+          "name": "Reality Anchor",
+          "description": "You can anchor an area to baseline reality, preventing most reality alterations within long range for 10 minutes."
+        },
+        {
+          "tier": 6,
+          "name": "Perfect Containment",
+          "description": "Once per day, you can create an unbreakable containment field that can hold even the most powerful anomalies for up to 1 hour."
+        }
+      ]
+    }
