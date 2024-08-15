@@ -1,0 +1,49 @@
+{
+      "name": "Bears a Halo of Fire",
+      "description": "You control flames and heat, manipulating them to your advantage.",
+      "connectionOptions": [
+        "One PC is deathly afraid of fire because of you.",
+        "You once saved one PC from a fire.",
+        "You and one PC have a mutual friend who was killed in a fire."
+      ],
+      "additionalEquipment": [
+        "Matches or a lighter"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Shroud of Flame",
+          "description": "At will, you can surround yourself with flames that last for up to 10 minutes. The flames don't burn you, but they inflict 1 point of damage to anyone who touches you."
+        },
+        {
+          "tier": 1,
+          "name": "Hurl Flame",
+          "description": "You can throw a small bolt of fire a short distance, inflicting 2 points of damage."
+        },
+        {
+          "tier": 2,
+          "name": "Fiery Hand of Doom",
+          "description": "Your touch inflicts damage as a medium weapon, and you can choose to inflict fire damage instead of normal damage."
+        },
+        {
+          "tier": 3,
+          "name": "Flameblade",
+          "description": "You can cause a weapon you wield to burst into flames for 1 minute, giving it +2 to damage."
+        },
+        {
+          "tier": 4,
+          "name": "Fire Tendrils",
+          "description": "You can attack up to three foes within short range with tendrils of flame, inflicting 3 points of damage on each target."
+        },
+        {
+          "tier": 5,
+          "name": "Flamestrike",
+          "description": "You can call down a pillar of flame on a target within long range, inflicting 6 points of damage."
+        },
+        {
+          "tier": 6,
+          "name": "Living Flame",
+          "description": "You can transform your body into living flame for up to 1 minute. While in this form, you can fly, pass through small openings, and are immune to fire damage."
+        }
+      ]
+    }
