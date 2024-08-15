@@ -1,0 +1,53 @@
+{
+  "name": "Oversees the Veil",
+  "description": "You possess high-level clearance and the ability to access and control vast amounts of classified information.",
+  "connectionOptions": [
+    "One PC was involved in an operation you personally authorized.",
+    "You have been monitoring one PC due to their potential anomalous nature.",
+    "One PC's family member worked for you in the past.",
+    "You suspect one PC might be a security risk and are discreetly investigating them."
+  ],
+  "additionalEquipment": [
+    "Top-secret clearance badge",
+    "Quantum-encrypted communication device",
+    "Reality-stabilized data storage unit",
+    "Emergency world-line adjustment device"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Classified Knowledge",
+      "description": "You're trained in all tasks related to recalling classified information about anomalies, the Foundation, or global conspiracies."
+    },
+    {
+      "tier": 1,
+      "name": "Secure Line",
+      "description": "You can establish a secure communication channel to request information or resources once per day."
+    },
+    {
+      "tier": 2,
+      "name": "Tactical Oversight",
+      "description": "You can spend 3 Intellect points to give all allies an asset on their next action by providing high-level tactical information."
+    },
+    {
+      "tier": 3,
+      "name": "Reality Revision",
+      "description": "Once per day, you can attempt to make a small change to reality by editing official records and manipulating information flows. This is a difficult Intellect task."
+    },
+    {
+      "tier": 4,
+      "name": "Contingency Activation",
+      "description": "You can activate a pre-planned contingency measure to deal with a current threat. This could involve calling in special forces, activating secret protocols, or revealing hidden resources."
+    },
+    {
+      "tier": 5,
+      "name": "Veil Enforcement",
+      "description": "You can attempt to enforce the veil on a large scale, erasing or altering public knowledge of an event. This is a challenging task that may require multiple rolls and have unforeseen consequences."
+    },
+    {
+      "tier": 6,
+      "name": "Reality Anchor Override",
+      "description": "Once per session, you can override reality anchors in a large area, either stabilizing or destabilizing reality as needed. The effects are powerful but may have significant unforeseen consequences."
+    }
+  ]
+}
