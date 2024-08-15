@@ -5,20 +5,16 @@ package playerMeta;
  **/
 public class Abilities {
     private  String name;
-    private String type;
-
     private int tier;
     private final String description;
     //Default constructor creates a 'tag' Object as a placeholder when player input is needed.
     public Abilities() {
         this.name = "tag";
-        this.type = "tag";
         this. tier = 0;
         this.description = "no description";
     }
-    public Abilities(String name, String type, int  tier,String description) {
+    public Abilities(String name, int tier,String description) {
         this.name = name;
-        this.type = type;
         this. tier =  tier;
         this.description = description;
     }
@@ -30,10 +26,6 @@ public class Abilities {
 
     public String getName() {
         return name;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public int getTier() {
