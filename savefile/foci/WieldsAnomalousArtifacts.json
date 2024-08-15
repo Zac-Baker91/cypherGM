@@ -1,0 +1,50 @@
+{
+"name": "Wields Anomalous Artifacts",
+      "description": "You have the ability to use and control various anomalous artifacts safely.",
+      "connectionOptions": [
+        "One PC is fascinated by your artifacts and always wants to study them.",
+        "You once used an artifact to save one PC's life.",
+        "One PC distrusts your reliance on anomalous objects."
+      ],
+      "additionalEquipment": [
+        "Secure artifact storage case",
+        "Artifact activation key (unique to you)"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Artifact Attunement",
+          "description": "You are trained in identifying and safely handling anomalous artifacts."
+        },
+        {
+          "tier": 1,
+          "name": "Controlled Activation",
+          "description": "You can activate one known anomalous artifact without rolling on the mishap table."
+        },
+        {
+          "tier": 2,
+          "name": "Artifact Shield",
+          "description": "You can use artifacts to create a shield that gives you +1 to Armor for 10 minutes."
+        },
+        {
+          "tier": 3,
+          "name": "Synergistic Use",
+          "description": "You can use two artifacts simultaneously without increasing the chance of mishaps."
+        },
+        {
+          "tier": 4,
+          "name": "Artifact Overcharge",
+          "description": "You can overcharge an artifact, doubling its effect but burning it out in the process."
+        },
+        {
+          "tier": 5,
+          "name": "Artifact Creation",
+          "description": "You can attempt to create a temporary anomalous artifact once per day."
+        },
+        {
+          "tier": 6,
+          "name": "Reality Rewrite",
+          "description": "Once per session, you can use multiple artifacts to rewrite a small aspect of reality within long range."
+        }
+      ]
+    }
