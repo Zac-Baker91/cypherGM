@@ -1,0 +1,50 @@
+{
+      "name": "Alters Baseline Reality",
+      "description": "You have the dangerous ability to manipulate the fabric of reality itself.",
+      "connectionOptions": [
+        "One PC witnessed you accidentally alter reality in a disturbing way.",
+        "You once used your powers to help one PC, but at a great cost.",
+        "One PC is studying your abilities to better understand reality alterations."
+      ],
+      "additionalEquipment": [
+        "Reality stabilization bracelet",
+        "Schrödinger's notebook (never sure what's written inside)"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Reality Glimpse",
+          "description": "You can see glimpses of alternate realities, giving you an asset to initiative rolls."
+        },
+        {
+          "tier": 1,
+          "name": "Minor Alteration",
+          "description": "You can make a minor, temporary change to physical reality within immediate range."
+        },
+        {
+          "tier": 2,
+          "name": "Probability Shift",
+          "description": "You can subtly alter probabilities, allowing you to reroll any roll once per day."
+        },
+        {
+          "tier": 3,
+          "name": "Localized Paradox",
+          "description": "You can create a localized paradox, hindering all actions of a target within short range for 1 minute."
+        },
+        {
+          "tier": 4,
+          "name": "Reality Pocket",
+          "description": "You can create a small pocket of altered reality that lasts for 10 minutes, within which you define minor laws of physics."
+        },
+        {
+          "tier": 5,
+          "name": "Quantum Superposition",
+          "description": "You can exist in a state of superposition for 1 round, allowing you to take two actions simultaneously."
+        },
+        {
+          "tier": 6,
+          "name": "Rewrite the Rules",
+          "description": "Once per session, you can temporarily rewrite a fundamental law of reality within long range for 1 minute."
+        }
+      ]
+    }
