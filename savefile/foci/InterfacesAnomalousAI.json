@@ -1,0 +1,50 @@
+{
+      "name": "Interfaces with Anomalous AI",
+      "description": "You have a unique ability to communicate with and sometimes control anomalous artificial intelligences.",
+      "connectionOptions": [
+        "One PC is wary of your connection to AIs.",
+        "You and one PC worked together to stop a rogue AI.",
+        "One PC is interested in learning about AI communication from you."
+      ],
+      "additionalEquipment": [
+        "Neural interface device",
+        "Quantum encryption key"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Digital Empath",
+          "description": "You are trained in all interactions with artificial intelligences."
+        },
+        {
+          "tier": 1,
+          "name": "Firewall",
+          "description": "You have +2 Armor against digital or mental attacks from AIs."
+        },
+        {
+          "tier": 2,
+          "name": "Code Whisperer",
+          "description": "You can attempt to implant a simple command into an AI system."
+        },
+        {
+          "tier": 3,
+          "name": "Sensorium Link",
+          "description": "You can link with an AI's sensors, gaining access to its sensory input for 10 minutes."
+        },
+        {
+          "tier": 4,
+          "name": "Overclock",
+          "description": "You can temporarily boost an AI's processing power, giving it an asset to all tasks for 1 minute."
+        },
+        {
+          "tier": 5,
+          "name": "AI Merge",
+          "description": "You can temporarily merge your consciousness with an AI, gaining access to its knowledge and abilities for 1 minute."
+        },
+        {
+          "tier": 6,
+          "name": "Singularity Conduit",
+          "description": "Once per session, you can channel the power of multiple AIs, gaining godlike computation abilities for one round."
+        }
+      ]
+    }
