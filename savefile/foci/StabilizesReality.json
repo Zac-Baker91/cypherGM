@@ -1,0 +1,53 @@
+{
+  "name": "Stabilizes Reality",
+  "description": "You specialize in maintaining normalcy in areas affected by reality-altering anomalies.",
+  "connectionOptions": [
+    "One PC was saved from a reality shift by your quick action.",
+    "You're monitoring a subtle reality fluctuation near one PC's home.",
+    "One PC is fascinated by your ability to perceive reality shifts.",
+    "You once accidentally caused a minor reality shift affecting one PC."
+  ],
+  "additionalEquipment": [
+    "Advanced Scranton Reality Anchor",
+    "Reality fluctuation detector",
+    "Baseline reality reference module",
+    "Portable hume level adjuster"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Reality Sense",
+      "description": "You can detect subtle changes in local reality. You're trained in perceiving and understanding reality fluctuations."
+    },
+    {
+      "tier": 1,
+      "name": "Anchor Deployment",
+      "description": "You can quickly deploy a Scranton Reality Anchor, stabilizing reality in an immediate area for 10 minutes."
+    },
+    {
+      "tier": 2,
+      "name": "Hume Field Manipulation",
+      "description": "You can adjust local hume levels slightly, providing an asset to tasks resisting reality alterations for you and nearby allies."
+    },
+    {
+      "tier": 3,
+      "name": "Reality Bubble",
+      "description": "You can create a small bubble of stable reality that moves with you, providing protection against minor reality shifts for 1 hour."
+    },
+    {
+      "tier": 4,
+      "name": "Anomaly Suppression",
+      "description": "You can attempt to suppress a localized reality-bending anomaly for up to 1 hour. This requires a difficult Intellect roll."
+    },
+    {
+      "tier": 5,
+      "name": "Reality Restoration",
+      "description": "You can attempt to restore a small area to its proper reality state, undoing the effects of reality-altering anomalies."
+    },
+    {
+      "tier": 6,
+      "name": "Pocket Universe",
+      "description": "Once per day, you can create a temporary pocket universe with stable reality, which lasts for up to an hour and can hold up to 5 people."
+    }
+  ]
+}
