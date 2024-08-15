@@ -1,0 +1,52 @@
+{
+      "name": "Fights with Panache",
+      "description": "You are a skilled and stylish combatant, using flair and finesse in battle.",
+      "connectionOptions": [
+        "One PC is your rival in combat prowess.",
+        "You once put on an impressive fighting display to impress one PC.",
+        "You and one PC fought back-to-back against overwhelming odds."
+      ],
+      "additionalEquipment": [
+        "A stylish piece of clothing or accessory",
+        "A signature weapon"
+      ],
+      "abilities": [
+        {
+          "tier": 1,
+          "name": "Flourish",
+          "description": "When you use a light or medium weapon, you add +1 to damage and can choose to flourish, adding style to your attack."
+        },
+        {
+          "tier": 1,
+          "name": "Trick Shot",
+          "description": "You can perform a difficult shot or attack maneuver. The attack is hindered, but if successful, it inflicts 1 additional point of damage."
+        },
+        {
+          "tier": 2,
+          "name": "Acrobatic Attack",
+          "description": "When you use movement as part of an attack, you gain an asset to the attack."
+        },
+        {
+          "tier": 3,
+          "name": "Dazzling Attack",
+          "description": "When you hit with a melee attack, you can choose to dazzle the target, hindering their next action."
+        },
+        {
+          "tier": 4,
+          "name": "Flamboyant Parry",
+          "description": "When you use a light or medium weapon, you add +1 to your Speed defense tasks."
+        },
+        {
+          "tier": 5,
+          "name": "Magnificent Flourish",
+          "description": "When you use Flourish, you add +3 to damage instead of +1."
+        },
+        {
+          "tier": 6,
+          "name": "Mastery of Panache",
+          "description": "Once per day, you can perform an amazing combat feat that guarantees success on one attack or defense action."
+        }
+      ]
+    }
+  ]
+}
