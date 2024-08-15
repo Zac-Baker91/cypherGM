@@ -1,0 +1,53 @@
+{
+  "name": "Survives Impossible Odds",
+  "description": "You've been subjected to numerous dangerous experiments and somehow lived to tell the tale.",
+  "connectionOptions": [
+    "One PC was involved in an experiment you survived.",
+    "You saved one PC during a containment breach.",
+    "One PC is fascinated by your accounts of anomalous experiences.",
+    "You have unexplained resistance to an anomaly affecting one PC."
+  ],
+  "additionalEquipment": [
+    "D-class jumpsuit",
+    "Experimental drug resistance kit",
+    "Makeshift protective gear",
+    "Journal of anomalous encounters"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Anomaly Exposure",
+      "description": "You're trained in resisting the effects of anomalous objects, entities, or phenomena."
+    },
+    {
+      "tier": 1,
+      "name": "Lucky Break",
+      "description": "Once per day, you can reroll a defense roll against an anomalous effect."
+    },
+    {
+      "tier": 2,
+      "name": "Adaptive Physiology",
+      "description": "Your body has become adaptable to strange conditions. You have +2 to Might defense rolls."
+    },
+    {
+      "tier": 3,
+      "name": "Anomalous Intuition",
+      "description": "You can sense general danger from anomalous sources within short range."
+    },
+    {
+      "tier": 4,
+      "name": "Miraculous Recovery",
+      "description": "Once per day, when you would be reduced to 0 Might, instead recover 1d6 Might points."
+    },
+    {
+      "tier": 5,
+      "name": "Reality Anchor",
+      "description": "Your presence stabilizes reality slightly. Allies within immediate range have an asset on rolls to resist reality-altering effects."
+    },
+    {
+      "tier": 6,
+      "name": "Anomalous Adaptation",
+      "description": "Once per day, you can temporarily gain immunity to a specific anomalous effect you've survived before."
+    }
+  ]
+}
