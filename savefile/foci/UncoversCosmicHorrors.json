@@ -1,0 +1,53 @@
+{
+  "name": "Uncovers Cosmic Horrors",
+  "description": "You're a detective specializing in cases involving the paranormal and eldritch, walking a dangerous line between sanity and madness.",
+  "connectionOptions": [
+    "One PC was a witness in a bizarre case you investigated.",
+    "You suspect one PC might be unknowingly connected to an eldritch entity.",
+    "One PC possesses an artifact you believe is key to solving a cosmic mystery.",
+    "You once saved one PC from a cult that was trying to sacrifice them."
+  ],
+  "additionalEquipment": [
+    "Detective's notebook filled with disturbing sketches",
+    "Revolver with silver bullets",
+    "Polaroid camera",
+    "Flask of 'medicinal' whiskey"
+  ],
+  "abilities": [
+    {
+      "tier": 1,
+      "name": "Keen Observer",
+      "description": "You're trained in perception tasks and noticing details others might miss, especially those of an otherworldly nature."
+    },
+    {
+      "tier": 1,
+      "name": "Hardboiled",
+      "description": "Your experiences have toughened you. You have +2 Armor against fear effects and Intellect damage from horrific revelations."
+    },
+    {
+      "tier": 2,
+      "name": "Connect the Dots",
+      "description": "You can spend Intellect points to gain sudden insights about the eldritch nature of a case you're working on."
+    },
+    {
+      "tier": 3,
+      "name": "Arcane Deduction",
+      "description": "Once per day, you can attempt to deduce the nature or weakness of an otherworldly entity or phenomenon. This is an Intellect task."
+    },
+    {
+      "tier": 4,
+      "name": "Touched by the Beyond",
+      "description": "Your brushes with the unknown have left a mark. You can sense the presence of powerful otherworldly entities within long range."
+    },
+    {
+      "tier": 5,
+      "name": "Skeptic's Shield",
+      "description": "Your rational mind provides some protection against reality-bending forces. You have +3 Armor against reality distortion effects."
+    },
+    {
+      "tier": 6,
+      "name": "Pierce the Veil",
+      "description": "Once per session, you can attempt to fully perceive and understand a cosmic truth. This provides incredible insight but risks severe Intellect damage and potential madness."
+    }
+  ]
+}
